@@ -1,0 +1,214 @@
+//Buscador 
+
+.group {
+
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    margin-left: 475px;
+    margin-top: 45px;
+
+}
+
+#inputBuscar {
+
+    width: 300px;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+
+    &::placeholder {
+
+        color: #9e9ea7;
+
+    }
+
+    &:focus,
+    &:hover {
+
+        outline: none;
+        border-color: black;
+        background-color: #fff;
+        box-shadow: black;
+
+    }
+
+
+}
+
+
+.Icon {
+
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+
+}
+
+
+#grillaFerre {
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 130px;
+    gap: 70px;
+    place-items: center;
+
+    .tarjetaFerreteria {
+
+        width: 240px;
+        height: 320px;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+
+        .imgFerreteria {
+
+            background-color: #ffcaa6;
+            height: 100px;
+            width: 100%;
+            border-radius: .5em;
+            transition: .3s ease;
+
+            &:hover {
+
+
+                transform: translateY(-25%);
+                box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+
+            }
+
+        }
+
+        .tarjetaInfo {
+
+            padding-top: 10%;
+
+            .textCuerpo {
+
+                font-size: .9em;
+                padding-bottom: 10px;
+
+            }
+
+
+        }
+
+        svg {
+
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .tarjetaFooter {
+
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+
+        }
+
+        .tarjetaTitle {
+
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 1.5;
+
+        }
+
+        .tarjetaButton {
+
+            display: flex;
+            padding: .3em;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+
+
+        }
+
+    }
+
+
+}
+
+.moverSelect {
+
+    margin-left: 40px;
+    margin-top: -2px;
+    width: 400px;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+
+}
+
+.badgeca {
+
+    margin-right: 20px;
+    width: 110px;
+
+}
+
+.btnCompra {
+
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+
+    &:hover{
+
+        background-color: #374151;
+
+    }
+
+    &:focus{
+
+        box-shadow: none;
+        outline: 2px solid white;
+        outline-offset: 2px;
+
+    }
+
+}

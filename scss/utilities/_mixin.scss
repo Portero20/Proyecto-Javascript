@@ -1,0 +1,25 @@
+@mixin top ($arriba){
+
+    margin-top: $arriba;
+
+}
+
+
+.metodos--icono4, .metodos--icono5, .metodos--icono6{
+
+    @include top(-40px)
+
+}
+
+
+@mixin botones{
+
+    padding: 5px
+
+}
+
+.botones{
+
+    @include botones;
+
+}

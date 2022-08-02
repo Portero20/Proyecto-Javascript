@@ -1,0 +1,35 @@
+$medidas-iconos:(
+
+    icono1:80px,
+    icono2:80px,
+    icono3:80px,
+    icono4:80px,
+    icono5:80px,
+    icono6:80px,
+
+);
+
+
+@each $ico, $med in $medidas-iconos{
+
+    .metodos--#{$ico}{
+
+        height: $med;
+        margin-left: 280px;
+        margin-top: 100px;
+        margin-bottom: 150px;
+
+        
+        
+
+    }
+
+}
+
+
+
+
+
+
+
+

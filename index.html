@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./img/logo_small_icon_only.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Ferreteria La Tuerca</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+        <div class="container-fluid d-flex">
+            <a class="navbar-brand" href="./index.html">
+
+                <img src="./img/logo_small.png" alt="" class="logo">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav  d-flex justify-content-end w-100">
+                    <a class="nav-link active text-light pse-enlaces" href="#metodos">Medioss</a>
+                    <a class="nav-link active text-light pse-enlaces" href="#categorias">Categorias</a>
+                    <a class="nav-link active text-light pse-enlaces" href="#vendidos">Vendidos</a>
+                    <a class="nav-link active text-light pse-enlaces" href="#encargados">Encargados</a>
+                    <a class="nav-link active text-light pse-enlaces" href="#cotizador">Cotizador</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <main>
+
+        <div class="loader-container">
+            <img src="./img/ZSj2.gif" alt="">
+        </div>
+
+
+        <section class="fondo"> 
+
+            <div>
+
+                <h1 class="txtInicio" data-aos="fade-right" data-aos-duration="1000">Bienvenidos a Ferreteria "La Tuerca"</h1>
+                <h2 class="subInicio">Consegui lo que buscas</h2>
+
+            </div>
+
+        </section>
+
+        <section class="metodosdePago">
+
+            <h2 class="mediosPago" id="metodos">Todos los medios de pago</h2>
+            <img src="./img/visa.png" alt="" class="metodos--icono1 animacion1" data-aos="fade-up-right"
+                data-aos-duration="2000">
+            <img src="./img/maestro.png" alt="" class="metodos--icono2 animacion1" data-aos="fade-up"
+                data-aos-duration="2000">
+            <img src="./img/paypal.png" alt="" class="metodos--icono3 animacion1" data-aos="fade-up-left"
+                data-aos-duration="2000">
+
+            <img src="./img/american-express.png" alt="" class="metodos--icono4 animacion" data-aos="fade-up-right"
+                data-aos-duration="2000">
+            <img src="./img/citi.png" alt="" class="metodos--icono5 animacion" data-aos="fade-up"
+                data-aos-duration="2000">
+            <img src="./img/hsbc.png" alt="" class="metodos--icono6 animacion" data-aos="fade-up-left"
+                data-aos-duration="2000">
+
+
+        </section>
+
+
+
+        <section class="container-cards grillaCards" id="categorias">
+
+            <h2 class="categorias" id="mediaCate" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
+                data-aos-easing="ease-in-sine">Nuestras categorias</h2>
+
+            <div class="card" style="--i:url(../img/tools-g5ec88de20_1920.jpg)" data-aos="flip-down"
+                data-aos-duration="2000">
+
+                <div class="content">
+
+                    <h2>Ferreteria</h2>
+                    <a href="./secciones/ferreteria.html">Ver productos</a>
+
+                </div>
+
+            </div>
+
+            <div class="card" style="--i:url(../img/durlockST-9_5.png)" data-aos="flip-down" data-aos-duration="2000">
+
+                <div class="content">
+
+                    <h2 class="texto-durlock">Construcción en Seco</h2>
+                    <a href="./secciones/construccion.html">Ver productos</a>
+
+                </div>
+
+            </div>
+
+            <div class="card" style="--i:url(../img/Cómo-iniciar-una-fábrica-de-pisos-de-cerámica.jpg)"
+                data-aos="flip-down" data-aos-duration="2000">
+
+                <div class="content">
+
+                    <h2>Ceramicos</h2>
+                    <a href="#">Ver productos</a>
+
+                </div>
+
+            </div>
+
+            <div class="card imagen-durlock" style="--i:url(../img/cemento-loma-negra-bolsa-x-50-kg.jpg)"
+                data-aos="flip-down" data-aos-duration="2000">
+
+                <div class="content">
+
+                    <h2 class="texto-durlock">Hierro y Cemento</h2>
+                    <a href="#">Ver productos</a>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <section class="background-top" id="vendidos">
+
+            <h2 class="masComprados">Los más vendidos</h2>
+
+            <div class="container">
+
+
+                <div class="tarjeta">
+
+                    <img src="./img/solera-gal-35.webp" alt="" id="persona-img">
+                    <h4 id="author">Durlock solera 35mm</h4>
+                    <p id="description">Mejores productos</p>
+                    <button class="prev-btn botones">
+
+                        <i class="fas fa-chevron-left"></i>
+
+                    </button>
+                    <button class="next-btn botones">
+
+                        <i class="fas fa-chevron-right"></i>
+
+                    </button>
+
+                    <button class="randomBtn botonMargen">Aleatorio</button>
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <section class="fondoEmpleados" id="encargados">
+
+            <h2 class="textoEmpleados">Nuestros Encargados</h2>
+
+            <div class="card1">
+                <div class="imge">
+                    <img src="./img/Imagen Exequiel.jpeg" alt="" class="imagen-exe">
+                </div>
+                <h1>Exequiel Portero</h1>
+                <h2>Front End Developer</h2>
+                <p>
+                    <i class="fa-brands fa-whatsapp encargadosIcons"></i>
+                    <i class="fa-brands fa-linkedin encargadosIcons"></i>
+                    <i class="fa-brands fa-github encargadosIcons"></i>
+                  
+                </p>
+            </div>
+
+
+            <div class="card1">
+                <div class="imge">
+                  <img src="./img/daniel-portero.jpeg" alt="" class="imagen-exe">
+                </div>
+                <h1>Daniel Portero</h1>
+                <h2>Encargado de Ferreteria</h2>
+                <p>
+                    <i class="fa-brands fa-whatsapp encargadosIcons"></i>
+                    <i class="fa-brands fa-facebook encargadosIcons"></i>
+                    <i class="fa-brands fa-instagram encargadosIcons"></i>
+
+                </p>
+              </div>
+
+        </section>
+
+
+
+        <section class="formulario" id="cotizador">
+
+
+            <h2>Pedir Cotización</h2>
+
+            <form action="https://formspree.io/f/xrgjnoao" method="POST"">
+
+                <div class=" mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" name="_replyto" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Ingrese su email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="name" class="form-control" name="name" id="exampleFormControlInput1"
+                        placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"
+                        required></textarea>
+                </div>
+                <div class="col-auto">
+                    <input type="submit" class="btn btn-dark">
+                </div>
+
+            </form>
+
+
+
+        </section>
+
+
+
+
+
+        <footer>
+
+            <div class="card text-center bg-dark footerBg">
+                <div class="card-footer">
+                    Ferreteria La Tuerca
+                </div>
+                <div class="card-body">
+                    <i class="fa-brands fa-whatsapp icono"></i>
+                    <i class="fa-brands fa-facebook icono"></i>
+                    <i class="fa-brands fa-linkedin-in icono"></i>
+                    <i class="fa-brands fa-twitter icono"></i>
+                    <p class="card-text">© 2022 La Tuerca Ferreteria</p>
+                </div>
+                <div class="card-footer text-muted">
+                    &copy;Todos los derechos reservados
+                </div>
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- Script main js -->
+
+    <script src="./js/loader.js"></script>
+    <script src="./js/cardmove.js"></script>
+
+
+    <!-- Scripts fontawesome, bootstrap y aos -->
+    <script src="https://kit.fontawesome.com/0dcf698896.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
