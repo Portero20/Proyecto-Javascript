@@ -219,3 +219,8 @@ confirm.onclick = () => {
 
 
 }
+
+
+//Limpiar carrito función (en seco)
+
+
