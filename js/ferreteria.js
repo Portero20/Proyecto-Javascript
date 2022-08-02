@@ -132,7 +132,7 @@ function seleccionarProducto() {
         gravity: "bottom",
 
         style: {
-          background: "linear-gradient(to right, #868585, #013695)",
+          background: "black",
         },
 
       }).showToast();
