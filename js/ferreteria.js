@@ -20,7 +20,7 @@ class Productos {
   }
   subTotal() {
 
-    return this.precio = this.cantidad;
+    return this.precio * this.cantidad;
 
   }
 
