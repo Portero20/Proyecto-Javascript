@@ -174,7 +174,7 @@ function carritoHTML(lista) {
 //Buscamos el producto con el addEventListener
 buscarProducto.addEventListener("input", function () {
 
-  const encontrados = tarjetas.filter(producto => producto.titulo.includes(this.value))
+  const encontrados = tarjetas.filter(producto => producto.titulo.includes(this.value))  //!No funciona con el toUpperCase y tampoco con lower
   console.log(encontrados);
 
 
