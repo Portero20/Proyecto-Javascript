@@ -20,6 +20,8 @@ const productosCarritoSeco = document.getElementById("productosSeco")
 const confirm = document.getElementById("confirmarEnseco")
 
 
+//Variable global ceramicos
+
 
 
 

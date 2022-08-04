@@ -20,7 +20,7 @@ class Enseco {
   }
   subTotal() {
 
-    return this.precio = this.cantidad;
+    return this.precio * this.cantidad;
 
   }
 
@@ -34,12 +34,12 @@ let tipos = ["Solera", "Montante", "Cinta", "Placa"]
 
 
 //Ferreteria productos
-seco.push(new Enseco(1, 570, "Durlock Solera", "35 BAJA C/PEST X 2600MM PERFIL DE ACERO GALVANIZADO", "../img/solera-gal-35.webp", tipos[0]))
-seco.push(new Enseco(2, 650, "Durlock Montante", "34X35X2600 MM PARA CIELORRASOS", "../img/durockmontante.jpg", tipos[1]))
-seco.push(new Enseco(3, 780, "Durlock Solera", "70 BAJA C/PEST X 2600MM DE ALUMINIO", "../img/solera70.jpg", tipos[0]))
-seco.push(new Enseco(4, 850, "Durlock Montante", "69X35X2600 MM ACERO ZINCADA ", "../img/montante69.jpg", tipos[1]))
-seco.push(new Enseco(5, 2600, "Cinta Microperforada", "Rollo de 160M DE USO SIMPLE PARA JUNTA DE PLACAS", "../img/cintamicro.webp", tipos[2]))
-seco.push(new Enseco(6, 1600, "Durlock Placa", "12.5MM EST REF 1.20 X 2.40M CON RESISTENCIA AL FUEGO", "../img/placadurlock.jpg", tipos[3]))
+seco.push(new Enseco(1, 570, "Durlock Solera".toUpperCase(), "35 BAJA C/PEST X 2600MM PERFIL DE ACERO GALVANIZADO", "../img/solera-gal-35.webp", tipos[0]))
+seco.push(new Enseco(2, 650, "Durlock Montante".toUpperCase(), "34X35X2600 MM PARA CIELORRASOS", "../img/durockmontante.jpg", tipos[1]))
+seco.push(new Enseco(3, 780, "Durlock Solera".toUpperCase(), "70 BAJA C/PEST X 2600MM DE ALUMINIO", "../img/solera70.jpg", tipos[0]))
+seco.push(new Enseco(4, 850, "Durlock Montante".toUpperCase(), "69X35X2600 MM ACERO ZINCADA ", "../img/montante69.jpg", tipos[1]))
+seco.push(new Enseco(5, 2600, "Cinta Microperforada".toUpperCase(), "Rollo de 160M DE USO SIMPLE PARA JUNTA DE PLACAS", "../img/cintamicro.webp", tipos[2]))
+seco.push(new Enseco(6, 1600, "Durlock Placa".toUpperCase(), "12.5MM EST REF 1.20 X 2.40M CON RESISTENCIA AL FUEGO", "../img/placadurlock.jpg", tipos[3]))
 
 console.log(seco);
 
@@ -94,8 +94,7 @@ ensecoUI(seco)  //Lo mostramos en el HTML
 //Buscamos el producto de construcción en seco
 buscarProducto.addEventListener("input", function () {
 
-  const encontrados = seco.filter(producto => producto.titulo.includes(this.value))
-  console.log(encontrados);
+  const encontrados = seco.filter(producto => producto.titulo.includes(this.value.toUpperCase()))
 
 
   if (encontrados.length > 0) {
@@ -104,7 +103,9 @@ buscarProducto.addEventListener("input", function () {
 
   } else {
 
-    divTarjetas.innerHTML = "No se encontro el producto"
+    divTarjetas.innerHTML = 
+    `<h1 class="txtNodispo">Producto no disponible</h1>
+    <img class="noDispo" src=../img/72gi.gif>`
 
   }
 
@@ -160,7 +161,7 @@ function seleccionamosProducto() {
         gravity: "bottom",
 
         style: {
-          background: "linear-gradient(to right, #868585, #013695)",
+          background: "black",
         },
 
       }).showToast();
@@ -178,7 +179,7 @@ function seleccionamosProducto() {
 
 
 
-//Creamos una funcion carritoMostrar para que se vaya sumando los elementos en el carrito
+//Creamos una funcion carritoMostrar para que se vaya sumando los elementos en el carrito y mostrando
 
 function carritoMostrar(lista) {
 
@@ -220,7 +221,5 @@ confirm.onclick = () => {
 
 }
 
-
-//Limpiar carrito función (en seco)
 
 

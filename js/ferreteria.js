@@ -34,12 +34,12 @@ let tipos = ["Trincheta", "Tijera", "Disco", "Electrodo"]
 
 
 //Ferreteria productos
-tarjetas.push(new Productos(1, 3200, "Tijera Corta Tubo", "PVC CROSSMAN 1-5/8 - AUTOMATICA", "../img/tijeracorta-tubos.jpg", tipos[1]))
-tarjetas.push(new Productos(2, 400, "Trincheta Crossman", "ECONO C/UNA HOJA - 9932822 - 19 MM", "../img/trincheta-crossman.jpg", tipos[0]))
-tarjetas.push(new Productos(3, 300, "Disco Flap", "115 MM X 1.0 MM ZIRCONICO PARA LIJADO", "../img/discoflap.jpg", tipos[2]))
-tarjetas.push(new Productos(4, 700, "Electrodo Conarco", "13 A - 2.5 MM - 2.5 MM SUAVE Y ESTABLE", "../img/electrodo-conarco.jpg", tipos[3]))
-tarjetas.push(new Productos(5, 5051, "Trincheta Bahco", "Retráctil Comportamiento 6 hojas 17cm", "../img/bahco-trincheta.webp", tipos[0]))
-tarjetas.push(new Productos(6, 4190, "Tijera Corta Tubo", "Radial Tawak Tkt02 Aluminio PARA USO PROFESIONAL", "../img/tijeratawak.webp", tipos[1]))
+tarjetas.push(new Productos(1, 3200, "Tijera Corta Tubo".toUpperCase(), "PVC CROSSMAN 1-5/8 - AUTOMATICA", "../img/tijeracorta-tubos.jpg", tipos[1]))
+tarjetas.push(new Productos(2, 400, "Trincheta Crossman".toUpperCase(), "ECONO C/UNA HOJA - 9932822 - 19 MM", "../img/trincheta-crossman.jpg", tipos[0]))
+tarjetas.push(new Productos(3, 300, "Disco Flap".toUpperCase(), "115 MM X 1.0 MM ZIRCONICO PARA LIJADO", "../img/discoflap.jpg", tipos[2]))
+tarjetas.push(new Productos(4, 700, "Electrodo Conarco".toUpperCase(), "13 A - 2.5 MM - 2.5 MM SUAVE Y ESTABLE", "../img/electrodo-conarco.jpg", tipos[3]))
+tarjetas.push(new Productos(5, 5051, "Trincheta Bahco".toUpperCase(), "Retráctil Comportamiento 6 hojas 17cm", "../img/bahco-trincheta.webp", tipos[0]))
+tarjetas.push(new Productos(6, 4190, "Tijera Corta Tubo".toUpperCase(), "Radial Tawak Tkt02 Aluminio PARA USO PROFESIONAL", "../img/tijeratawak.webp", tipos[1]))
 
 
 
@@ -174,7 +174,7 @@ function carritoHTML(lista) {
 //Buscamos el producto con el addEventListener
 buscarProducto.addEventListener("input", function () {
 
-  const encontrados = tarjetas.filter(producto => producto.titulo.includes(this.value))  //!No funciona con el toUpperCase y tampoco con lower
+  const encontrados = tarjetas.filter(producto => producto.titulo.includes(this.value.toUpperCase())) 
   console.log(encontrados);
 
 
@@ -184,7 +184,9 @@ buscarProducto.addEventListener("input", function () {
 
   } else {
 
-    divTarjetas.innerHTML = "No se encontro el producto"
+    divTarjetas.innerHTML = 
+    `<h1 class="txtNodispo">Producto no disponible</h1>
+    <img class="noDispo" src=../img/72gi.gif>`
 
   }
 
