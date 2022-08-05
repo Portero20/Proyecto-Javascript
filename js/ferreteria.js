@@ -23,6 +23,11 @@ class Productos {
     return this.precio * this.cantidad;
 
   }
+  agregarCantidad(valor) {
+
+    this.cantidad += valor; //permite agregar el valor en cantidades y restar el valor
+
+  }
 
 }
 
@@ -158,23 +163,109 @@ function carritoHTML(lista) {
 
     let product = document.createElement("div");
     product.innerHTML = ` ${producto.titulo}:
-    <span class="badge bg-warning text-dark">Precio: $ ${producto.precio}</span>
+    <span class="badge bg-warning text-dark separar">Precio: $ ${producto.precio}</span>
     <span class="badge bg-primary">Cantidad:  ${producto.cantidad}</span>
-    <span class="badge bg-dark">Subtotal: $ ${producto.subTotal()}</span>` //El subtotal es un metodo
+    <span class="badge bg-dark">Subtotal: $ ${producto.subTotal()}</span>
+    
+    <a id="${producto.id} " class="btn btn-secondary btn-add">+</a>
+    <a id="${producto.id} " class="btn btn-secondary btn-substraer">-</a>
+    <a id="${producto.id} " class="btn btn-secondary btn-delete">x</a>
+    
+
+    ` //El subtotal es un metodo
 
     productosCarrito.append(product);
 
+
+
   }
+  sumarCarrito(); //llamamos a la función para que se muestre en el html
+
+
+  //Query selector para cada una de las clases de las etiquetas a 
+
+  document.querySelectorAll(".btn-delete").forEach(boton => boton.onclick = eliminarCarrito);
+  document.querySelectorAll(".btn-add").forEach(boton => boton.onclick = addCarrito);
+  document.querySelectorAll(".btn-substraer").forEach(boton => boton.onclick = subCarrito);
+
+}
+
+
+//funcion para eliminar productos del carrito
+
+function eliminarCarrito() {
+
+  let posicion = carrito.findIndex(producto => producto.id == this.id); //recorre el array completo y le pasamos el id
+  carrito.splice(posicion, 1); //eliminar una posicion en especifico y eliminamos solo uno, splice es un metodo destructivo
+  carritoHTML(carrito);
+  localStorage.setItem("Carrito", JSON.stringify(carrito)); //pisamos el valor viejo con el nuevo valor con el nuevo array sin ningun elemento
+
+}
+
+
+//funcion para sumar la cantidad del producto
+function addCarrito() {
+
+  let producto = carrito.find(producto => producto.id == this.id) //find porque solo queremos el objeto
+
+  producto.agregarCantidad(1);
+
+  this.parentNode.children[1].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+
+  this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+
+  localStorage.setItem("Carrito", JSON.stringify(carrito)); //modificamos el localstorage
+
+
+
+}
+
+
+function subCarrito() {
+
+  let producto = carrito.find(producto => producto.id == this.id) //find porque solo queremos el objeto
+
+  if (producto.cantidad > 1) { //tiene que ser mayor de uno para restar
+
+
+    producto.agregarCantidad(-1) //decrementar la cantidad
+
+    this.parentNode.children[1].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+
+    this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+
+
+    localStorage.setItem("Carrito", JSON.stringify(carrito)); //modificamos el localstorage
+
+
+  }else{
+
+
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'No se puede agregar 0 cantidades!',
+    })
+
+
+  }
+
+
+
+
+
 
 
 }
 
 
 
+
+
 //Buscamos el producto con el addEventListener
 buscarProducto.addEventListener("input", function () {
 
-  const encontrados = tarjetas.filter(producto => producto.titulo.includes(this.value.toUpperCase())) 
+  const encontrados = tarjetas.filter(producto => producto.titulo.includes(this.value.toUpperCase()))
   console.log(encontrados);
 
 
@@ -184,8 +275,8 @@ buscarProducto.addEventListener("input", function () {
 
   } else {
 
-    divTarjetas.innerHTML = 
-    `<h1 class="txtNodispo">Producto no disponible</h1>
+    divTarjetas.innerHTML =
+      `<h1 class="txtNodispo">Producto no disponible</h1>
     <img class="noDispo" src=../img/72gi.gif>`
 
   }
@@ -203,6 +294,40 @@ confirmamos.onclick = () => {
     'Usted a comprado el producto!',
     'success'
   )
+
+
+}
+
+
+//funcion para sumar el total del carrito para ferreteria
+
+function sumarCarrito() {
+
+  //Creamos variable total, a carrito le pasamos reduce para que recorra y sume cada uno de los elementos que hay, += sumale lo que ya hay y suma producto.subTotal() y decirle en cuanto va a empezar la variable que quiero sumar
+
+  let total = carrito.reduce((totalCompra, producto) => totalCompra += producto.subTotal(), 0)
+  //no tenemos que pasarle llaves porque dara undefined, las llaves no puede interpetrar donde empieza y termina la estructura
+
+  totalCarritoInterfaz.innerHTML = `Total: $ ${total}`; //modificamos su html y concatenamos el precio total
+
+  return total; //retornamos para que se actualice la interfaz
+
+}
+
+
+
+//Guardar el carrito para que no tengamos que estar recargando, para que el usuario no pierda lo del carrito
+
+if ("Carrito" in localStorage) { //si existe en el localstorage
+
+  let guardados = JSON.parse(localStorage.getItem("Carrito")); //lo guardamos en el localstorage
+
+  for (const generico of guardados) { //recorremos
+
+    carrito.push(new Productos(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad)); //guardar de nuevo en el carrito
+
+  }
+  carritoHTML(carrito); //lo mostramos
 
 
 }

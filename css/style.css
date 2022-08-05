@@ -454,6 +454,10 @@ body {
   font-size: 40px;
 }
 
+.separar {
+  margin-bottom: 40px;
+}
+
 .botonEnseco {
   margin-right: 20px;
   width: 110px;
