@@ -203,9 +203,9 @@ function carritoMostrar(lista) {
     <span class="badge bg-dark">Subtotal: $ ${product.subTotal()}</span>
     
 
-    <a id="${product.id} " class="btn btn-secondary btn-añadir">+</a>
-    <a id="${product.id} " class="btn btn-secondary btn-restar">-</a>
-    <a id="${product.id} " class="btn btn-secondary btn-borrar">x</a>
+    <a id="${product.id} " class="btn btn-dark btn-añadir btn-sm"><i class="fa-solid fa-plus"></i></a>
+    <a id="${product.id} " class="btn btn-dark btn-restar btn-sm"><i class="fa-solid fa-minus"></i></a>
+    <a id="${product.id} " class="btn btn-dark btn-borrar btn-sm"><i class="fa-solid fa-trash"></i></a>
 
     `
 

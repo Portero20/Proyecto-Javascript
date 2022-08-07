@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 * {
   padding: 0;
@@ -458,6 +459,10 @@ body {
   margin-bottom: 40px;
 }
 
+.btn-add {
+  margin-left: 10px;
+}
+
 .botonEnseco {
   margin-right: 20px;
   width: 110px;
@@ -465,6 +470,10 @@ body {
 
 .iconoCarrito {
   font-size: 18px;
+}
+
+.btn-añadir {
+  margin-left: 10px;
 }
 
 .metodos--icono1 {

@@ -167,9 +167,9 @@ function carritoHTML(lista) {
     <span class="badge bg-primary">Cantidad:  ${producto.cantidad}</span>
     <span class="badge bg-dark">Subtotal: $ ${producto.subTotal()}</span>
     
-    <a id="${producto.id} " class="btn btn-secondary btn-add">+</a>
-    <a id="${producto.id} " class="btn btn-secondary btn-substraer">-</a>
-    <a id="${producto.id} " class="btn btn-secondary btn-delete">x</a>
+    <a id="${producto.id} " class="btn btn-dark btn-add btn-sm"><i class="fa-solid fa-plus"></i></a>
+    <a id="${producto.id} " class="btn btn-dark btn-substraer btn-sm"><i class="fa-solid fa-minus"></i></a>
+    <a id="${producto.id} " class="btn btn-dark btn-delete btn-sm"><i class="fa-solid fa-trash"></i></a>
     
 
     ` //El subtotal es un metodo
@@ -214,6 +214,8 @@ function addCarrito() {
 
   this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
+  sumarCarrito();
+
   localStorage.setItem("Carrito", JSON.stringify(carrito)); //modificamos el localstorage
 
 
@@ -234,6 +236,7 @@ function subCarrito() {
 
     this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
+    sumarCarrito();
 
     localStorage.setItem("Carrito", JSON.stringify(carrito)); //modificamos el localstorage
 
@@ -305,7 +308,7 @@ function sumarCarrito() {
 
   //Creamos variable total, a carrito le pasamos reduce para que recorra y sume cada uno de los elementos que hay, += sumale lo que ya hay y suma producto.subTotal() y decirle en cuanto va a empezar la variable que quiero sumar
 
-  let total = carrito.reduce((totalCompra, producto) => totalCompra += producto.subTotal(), 0)
+  let total = carrito.reduce((totalCompra, producto) => totalCompra += producto.subTotal(), 0);
   //no tenemos que pasarle llaves porque dara undefined, las llaves no puede interpetrar donde empieza y termina la estructura
 
   totalCarritoInterfaz.innerHTML = `Total: $ ${total}`; //modificamos su html y concatenamos el precio total
