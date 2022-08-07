@@ -200,6 +200,18 @@ function eliminarCarrito() {
   carritoHTML(carrito);
   localStorage.setItem("Carrito", JSON.stringify(carrito)); //pisamos el valor viejo con el nuevo valor con el nuevo array sin ningun elemento
 
+  Toastify({
+
+    text: "Producto eliminado",
+    
+    duration: 3000,
+
+    style: {
+      background: "black",
+    },
+    
+    }).showToast();
+
 }
 
 
