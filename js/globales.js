@@ -50,7 +50,11 @@ setTimeout(() => {
 
         },
 
-        gravity: "bottom"
+        gravity: "bottom",
+
+        style: {
+            background: "black",
+          },
 
 
 
@@ -62,4 +66,4 @@ setTimeout(() => {
 
 
 
-}, 7000);
+}, 8000);
