@@ -1,0 +1,6 @@
+[{"id":1,"precio":570,"titulo":"Durlock Solera","descripcion":"35 BAJA C/PEST X 2600MM PERFIL DE ACERO GALVANIZADO","imagen":"../img/solera-gal-35.webp","tipos":"Solera"},
+{"id":2,"precio":650,"titulo":"Durlock Montante","descripcion":"34X35X2600 MM PARA CIELORRASOS","imagen":"../img/durockmontante.jpg","tipos":"Montante"},
+{"id":3,"precio":780,"titulo":"Durlock Solera","descripcion":"70 BAJA C/PEST X 2600MM DE ALUMINIO","imagen":"../img/solera70.jpg","tipos":"Solera"},
+{"id":4,"precio":850,"titulo":"Durlock Montante","descripcion":"69X35X2600 MM ACERO ZINCADA","imagen":"../img/montante69.jpg","tipos":"Montante"},
+{"id":5,"precio":2600,"titulo":"Cinta Microperforada","descripcion":"Rollo de 160M DE USO SIMPLE PARA JUNTA DE PLACAS","imagen":"../img/cintamicro.webp","tipos":"Cinta"},
+{"id":6,"precio":1600,"titulo":"Durlock Placa","descripcion":"12.5MM EST REF 1.20 X 2.40M CON RESISTENCIA AL FUEGO","imagen":"../img/placadurlock.jpg","tipos":"Placa"}]

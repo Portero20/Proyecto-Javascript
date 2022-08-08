@@ -5,7 +5,7 @@ class Enseco {
 
     this.id = id;
     this.precio = precio;
-    this.titulo = titulo;
+    this.titulo = titulo.toUpperCase();
     this.descripcion = descripcion;
     this.imagen = imagen;
     this.tipos = tipos;
@@ -36,20 +36,6 @@ let seco = [];
 
 
 let tipos = ["Solera", "Montante", "Cinta", "Placa"]
-
-
-//Ferreteria productos
-seco.push(new Enseco(1, 570, "Durlock Solera".toUpperCase(), "35 BAJA C/PEST X 2600MM PERFIL DE ACERO GALVANIZADO", "../img/solera-gal-35.webp", tipos[0]))
-seco.push(new Enseco(2, 650, "Durlock Montante".toUpperCase(), "34X35X2600 MM PARA CIELORRASOS", "../img/durockmontante.jpg", tipos[1]))
-seco.push(new Enseco(3, 780, "Durlock Solera".toUpperCase(), "70 BAJA C/PEST X 2600MM DE ALUMINIO", "../img/solera70.jpg", tipos[0]))
-seco.push(new Enseco(4, 850, "Durlock Montante".toUpperCase(), "69X35X2600 MM ACERO ZINCADA ", "../img/montante69.jpg", tipos[1]))
-seco.push(new Enseco(5, 2600, "Cinta Microperforada".toUpperCase(), "Rollo de 160M DE USO SIMPLE PARA JUNTA DE PLACAS", "../img/cintamicro.webp", tipos[2]))
-seco.push(new Enseco(6, 1600, "Durlock Placa".toUpperCase(), "12.5MM EST REF 1.20 X 2.40M CON RESISTENCIA AL FUEGO", "../img/placadurlock.jpg", tipos[3]))
-
-console.log(seco);
-
-
-
 
 let divTarjetas = document.getElementById("grillaFerre")
 
@@ -197,15 +183,19 @@ function carritoMostrar(lista) {
 
     let producto = document.createElement("div")
 
-    producto.innerHTML = ` ${product.titulo}:
-    <span class="badge bg-warning text-dark separar">Precio: $ ${product.precio}</span>
-    <span class="badge bg-primary">Cantidad:  ${product.cantidad}</span>
-    <span class="badge bg-dark">Subtotal: $ ${product.subTotal()}</span>
+    producto.innerHTML = ` 
+    <img class="imagenCarrito" src="${product.imagen}" height="200"> 
+    <h3>${product.titulo}:</h3>
+    <h3 class="separar">Precio: $ ${product.precio}</h3>
+    <h3 class="separar2">Cantidad:  ${product.cantidad}</>
+    <h3 class="separar3">Subtotal: $ ${product.subTotal()}</h3>
     
 
     <a id="${product.id} " class="btn btn-dark btn-añadir btn-sm"><i class="fa-solid fa-plus"></i></a>
     <a id="${product.id} " class="btn btn-dark btn-restar btn-sm"><i class="fa-solid fa-minus"></i></a>
     <a id="${product.id} " class="btn btn-dark btn-borrar btn-sm"><i class="fa-solid fa-trash"></i></a>
+
+    <hr class="colorHr">
 
     `
 
@@ -247,9 +237,9 @@ function añadirCarrito() {
 
   producto.agregarCantidad(1);
 
-  this.parentNode.children[1].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+  this.parentNode.children[3].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
-  this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+  this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
 
   localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos el localstorage
@@ -269,9 +259,9 @@ function restarCarrito() {
 
     producto.agregarCantidad(-1) //decrementar la cantidad
 
-    this.parentNode.children[1].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+    this.parentNode.children[3].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
-    this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+    this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
 
     localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos el localstorage
@@ -335,6 +325,28 @@ if ("CarritoSeco" in localStorage) { //si existe en el localstorage
 
 
 }
+
+
+//Función para cargar datos enseco
+
+async function cargarDatosSeco(){
+
+  const pedido = await fetch("../json/enseco.json");
+  const datosJson = await pedido.json();
+
+  for (const generico of datosJson) {
+    
+    seco.push(new Enseco(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad))
+
+  }
+
+  ensecoUI(seco,"productosEnseco")
+
+}
+
+cargarDatosSeco();
+
+
 
 
 //Función para realizar un POST para en seco

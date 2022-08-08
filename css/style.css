@@ -456,11 +456,30 @@ body {
 }
 
 .separar {
-  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.separar2 {
+  margin-bottom: 10px;
+}
+
+.separar3 {
+  margin-bottom: 20px;
 }
 
 .btn-add {
   margin-left: 10px;
+}
+
+.colorHr {
+  width: 850px;
+  margin-left: -16px;
+}
+
+.imagenCarrito {
+  width: 230px;
+  margin-left: 400px;
+  margin-bottom: -230px;
 }
 
 .botonEnseco {

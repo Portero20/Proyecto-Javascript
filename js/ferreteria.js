@@ -5,7 +5,7 @@ class Productos {
 
     this.id = id;
     this.precio = precio;
-    this.titulo = titulo;
+    this.titulo = titulo.toUpperCase();
     this.descripcion = descripcion;
     this.imagen = imagen;
     this.tipos = tipos;
@@ -36,20 +36,6 @@ let tarjetas = [];
 
 
 let tipos = ["Trincheta", "Tijera", "Disco", "Electrodo"]
-
-
-//Ferreteria productos
-tarjetas.push(new Productos(1, 3200, "Tijera Corta Tubo".toUpperCase(), "PVC CROSSMAN 1-5/8 - AUTOMATICA", "../img/tijeracorta-tubos.jpg", tipos[1]))
-tarjetas.push(new Productos(2, 400, "Trincheta Crossman".toUpperCase(), "ECONO C/UNA HOJA - 9932822 - 19 MM", "../img/trincheta-crossman.jpg", tipos[0]))
-tarjetas.push(new Productos(3, 300, "Disco Flap".toUpperCase(), "115 MM X 1.0 MM ZIRCONICO PARA LIJADO", "../img/discoflap.jpg", tipos[2]))
-tarjetas.push(new Productos(4, 700, "Electrodo Conarco".toUpperCase(), "13 A - 2.5 MM - 2.5 MM SUAVE Y ESTABLE", "../img/electrodo-conarco.jpg", tipos[3]))
-tarjetas.push(new Productos(5, 5051, "Trincheta Bahco".toUpperCase(), "Retráctil Comportamiento 6 hojas 17cm", "../img/bahco-trincheta.webp", tipos[0]))
-tarjetas.push(new Productos(6, 4190, "Tijera Corta Tubo".toUpperCase(), "Radial Tawak Tkt02 Aluminio PARA USO PROFESIONAL", "../img/tijeratawak.webp", tipos[1]))
-
-
-
-
-
 
 let divTarjetas = document.getElementById("grillaFerre")
 
@@ -162,15 +148,20 @@ function carritoHTML(lista) {
   for (const producto of lista) {
 
     let product = document.createElement("div");
-    product.innerHTML = ` ${producto.titulo}:
-    <span class="badge bg-warning text-dark separar">Precio: $ ${producto.precio}</span>
-    <span class="badge bg-primary">Cantidad:  ${producto.cantidad}</span>
-    <span class="badge bg-dark">Subtotal: $ ${producto.subTotal()}</span>
-    
+    product.innerHTML = `
+    <img class="imagenCarrito" src="${producto.imagen}" height="200"> 
+    <h3>${producto.titulo}</h3>
+    <h3 class="separar">Precio: $ ${producto.precio}</h3>
+    <h3 class="separar2">Cantidad:  ${producto.cantidad}</h3>
+    <h3 class="separar3">Subtotal: $ ${producto.subTotal()}</h3>
+
+     
     <a id="${producto.id} " class="btn btn-dark btn-add btn-sm"><i class="fa-solid fa-plus"></i></a>
     <a id="${producto.id} " class="btn btn-dark btn-substraer btn-sm"><i class="fa-solid fa-minus"></i></a>
     <a id="${producto.id} " class="btn btn-dark btn-delete btn-sm"><i class="fa-solid fa-trash"></i></a>
-    
+   
+
+    <hr class="colorHr">
 
     ` //El subtotal es un metodo
 
@@ -206,6 +197,8 @@ function eliminarCarrito() {
 
     duration: 2000,
 
+    position: "left",
+
     style: {
       background: "black",
     },
@@ -222,9 +215,9 @@ function addCarrito() {
 
   producto.agregarCantidad(1);
 
-  this.parentNode.children[1].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+  this.parentNode.children[3].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
-  this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+  this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
   sumarCarrito();
 
@@ -244,9 +237,9 @@ function subCarrito() {
 
     producto.agregarCantidad(-1) //decrementar la cantidad
 
-    this.parentNode.children[1].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+    this.parentNode.children[3].innerHTML = "Cantidad: " + producto.cantidad; //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
-    this.parentNode.children[2].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
+    this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
     sumarCarrito();
 
@@ -336,6 +329,29 @@ if ("Carrito" in localStorage) { //si existe en el localstorage
 
 
 }
+
+
+
+//Función para cargar datos para ferreteria
+
+async function cargarDatos(){
+
+  const pedido = await fetch("../json/ferreteria.json");
+  const datosJson = await pedido.json();
+
+  for (const generico of datosJson) {
+    
+    tarjetas.push(new Productos(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad))
+
+  }
+
+  tarjetasUI(tarjetas,"productosContainer")
+
+}
+
+cargarDatos();
+
+
 
 
 //Función para realizar un POST para ferreteria (fetch necesita la url y el segundo parametro es opcional)
