@@ -293,20 +293,14 @@ function restarCarrito() {
 
 
 
-//Alert de compra confirmada cuando se haga click en el boton
+//Alert de compra confirmada cuando se haga click en el boton (fetch)
 
 confirm.onclick = () => {
 
-
-  Swal.fire(
-    'Felicitaciones!',
-    'Usted a comprado el producto!',
-    'success'
-  )
+  enviarLosDatos();
 
 
 }
-
 
 
 
@@ -338,6 +332,73 @@ if ("CarritoSeco" in localStorage) { //si existe en el localstorage
 
   }
   carritoMostrar(carritoEnseco); //lo mostramos
+
+
+}
+
+
+//Función para realizar un POST para en seco
+
+
+function enviarLosDatos(lista) {
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+
+      method: "POST", //metodo POST
+      body: JSON.stringify({
+        carrito: lista,
+        userID: 30
+      }), //le puedo mandar cualquier tipo de información al body pero primero lo transformamos en JSON
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      } //informacion que necesito enviar para ver que información es (tipo de contenido,charset)
+
+
+    }).then((respuesta) => {
+      return respuesta.json()
+    }) //primero lo pasamos a JSON
+    .then((datos) => { //para recibir los datos
+
+      Swal.fire(
+        'Compra realizada',
+        `Compra nro ${datos.id} realizada correctamente`, //si sale todo bien dira compra realizada
+        'success'
+      )
+      vaciarElCarrito();
+
+    }).catch((datos) => {
+
+
+      Swal.fire(
+        'Compra rechazada',
+        `Compra nro ${datos.id} fue rechadaza`, //si sale todo mal dira compra rechazada
+        'error'
+      )
+
+
+    })
+
+}
+
+
+
+
+//Función para vaciar el carrito de ferreteria
+
+function vaciarElCarrito() {
+
+
+  //borramos el localstorage
+
+  localStorage.clear();
+
+  //borramos el array carrito con splice
+
+  carritoEnseco.splice(0, carritoEnseco.length);
+
+  //llamamos a la función para generar la interfaz vacía
+
+  carritoMostrar(carritoEnseco);
 
 
 }

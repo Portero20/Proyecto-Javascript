@@ -203,14 +203,14 @@ function eliminarCarrito() {
   Toastify({
 
     text: "Producto eliminado",
-    
-    duration: 3000,
+
+    duration: 2000,
 
     style: {
       background: "black",
     },
-    
-    }).showToast();
+
+  }).showToast();
 
 }
 
@@ -253,7 +253,7 @@ function subCarrito() {
     localStorage.setItem("Carrito", JSON.stringify(carrito)); //modificamos el localstorage
 
 
-  }else{
+  } else {
 
 
     Swal.fire({
@@ -267,12 +267,7 @@ function subCarrito() {
 
 
 
-
-
-
-
 }
-
 
 
 
@@ -300,16 +295,11 @@ buscarProducto.addEventListener("input", function () {
 })
 
 
-//Boton confirmar del carrito para que salga un alert que diga "Felicitaciones, usted a comprado el producto"
+//Alert confirmar del carrito para que salga un alert que diga (fetch)
 
-confirmamos.onclick = () => {
+confirmamos.onclick = () => { 
 
-  Swal.fire(
-    'Felicitaciones!',
-    'Usted a comprado el producto!',
-    'success'
-  )
-
+  enviarDatos();
 
 }
 
@@ -343,6 +333,73 @@ if ("Carrito" in localStorage) { //si existe en el localstorage
 
   }
   carritoHTML(carrito); //lo mostramos
+
+
+}
+
+
+//Función para realizar un POST para ferreteria (fetch necesita la url y el segundo parametro es opcional)
+
+
+function enviarDatos(lista) {
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+
+      method: "POST", //metodo POST
+      body: JSON.stringify({
+        carrito: lista,
+        userID: 20
+      }), //le puedo mandar cualquier tipo de información al body pero primero lo transformamos en JSON
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      } //informacion que necesito enviar para ver que información es (tipo de contenido,charset)
+
+
+    }).then((respuesta) => {
+      return respuesta.json()
+    }) //primero lo pasamos a JSON
+    .then((datos) => { //para recibir los datos
+
+      Swal.fire(
+        'Compra realizada',
+        `Compra nro ${datos.id} realizada correctamente`, //si sale todo bien dira compra realizada
+        'success'
+      )
+      vaciarCarrito();
+
+    }).catch((datos) => {
+
+
+      Swal.fire(
+        'Compra rechazada',
+        `Compra nro ${datos.id} fue rechadaza`, //si sale todo mal dira compra rechazada
+        'error'
+      )
+
+
+    })
+
+}
+
+
+
+
+//Función para vaciar el carrito de ferreteria
+
+function vaciarCarrito() {
+
+
+  //borramos el localstorage
+
+  localStorage.clear();
+
+  //borramos el array carrito con splice
+
+  carrito.splice(0, carrito.length);
+
+  //llamamos a la función para generar la interfaz vacía
+
+  carritoHTML(carrito);
 
 
 }
