@@ -335,7 +335,7 @@ function sumarCarrito() {
 
 if ("Carrito" in localStorage) { //si existe en el localstorage
 
-  let guardados = JSON.parse(localStorage.getItem("Carrito")); //lo guardamos en el localstorage
+  let guardados = JSON.parse(localStorage.getItem("Carrito")); //lo guardamos en el localstorage, parse para pasar de JSON  a objeto
 
   for (const generico of guardados) { //recorremos
 
