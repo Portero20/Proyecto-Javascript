@@ -400,7 +400,7 @@ function enviarDatos(lista) {
 
 
 
-//Función para vaciar el carrito de ferreteria
+//Función para vaciar el carrito completo de ferreteria
 
 function vaciarCarrito() {
 
