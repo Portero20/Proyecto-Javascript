@@ -329,16 +329,16 @@ if ("CarritoSeco" in localStorage) { //si existe en el localstorage
 }
 
 
-//Función para cargar datos enseco
+//Función para cargar datos enseco con async (forma mas simplificada de escribir el fetch)
 
-async function cargarDatosSeco(){
+async function cargarDatosSeco(){  //
 
-  const pedido = await fetch("../json/enseco.json");
-  const datosJson = await pedido.json();
+  const pedido = await fetch("../json/enseco.json");  //lo traemos de manera local
+  const datosJson = await pedido.json();   // lo transformamos en json
 
-  for (const generico of datosJson) {
+  for (const generico of datosJson) {  //lo recorremos con un for of
     
-    seco.push(new Enseco(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad))
+    seco.push(new Enseco(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad)) //pusheamos en un nuevo array
 
   }
 
@@ -346,7 +346,7 @@ async function cargarDatosSeco(){
 
 }
 
-cargarDatosSeco();
+cargarDatosSeco();  //lo mostramos en la interfaz de construcción en seco
 
 
 
@@ -378,7 +378,7 @@ function enviarLosDatos(lista) {
         `Compra nro ${datos.id} realizada correctamente`, //si sale todo bien dira compra realizada
         'success'
       )
-      vaciarElCarrito();
+      vaciarElCarrito();  //llamamos a la función vaciarElCarrito para cuando apriete confirmar vacie el carrito
 
     }).catch((datos) => {
 
