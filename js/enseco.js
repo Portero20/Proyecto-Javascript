@@ -241,6 +241,7 @@ function añadirCarrito() {
 
   this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
+  sumardelCarrito();
 
   localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos el localstorage
 
@@ -263,6 +264,7 @@ function restarCarrito() {
 
     this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
+    sumardelCarrito();
 
     localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos el localstorage
 
@@ -300,12 +302,12 @@ function sumardelCarrito() {
 
   //Creamos variable total, a carrito le pasamos reduce para que recorra y sume cada uno de los elementos que hay, += sumale lo que ya hay y suma producto.subTotal() y decirle en cuanto va a empezar la variable que quiero sumar
 
-  let total = carritoEnseco.reduce((totalCompra, producto) => totalCompra += producto.subTotal(), 0)
+  let totalEnseco = carritoEnseco.reduce((totalCompra, producto) => totalCompra += producto.subTotal(), 0)
   //no tenemos que pasarle llaves porque dara undefined, las llaves no puede interpetrar donde empieza y termina la estructura
 
-  totalCarritoSeco.innerHTML = `Total: $ ${total}`; //modificamos su html y concatenamos el precio total
+  totalCarritoSeco.innerHTML = `Total: $ ${totalEnseco}`; //modificamos su html y concatenamos el precio total
 
-  return total; //retornamos para que se actualice la interfaz
+  return totalEnseco; //retornamos para que se actualice la interfaz
 
 }
 
