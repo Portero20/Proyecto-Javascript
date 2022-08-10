@@ -1,6 +1,49 @@
-[{"id":1,"precio":3200,"titulo":"Tijera Corta Tubo","descripcion":"PVC CROSSMAN 1-5/8 - AUTOMATICA","imagen":"../img/tijeracorta-tubos.jpg","tipos":"Tijera"},
-{"id":2,"precio":400,"titulo":"Trincheta Crossman","descripcion":"ECONO C/UNA HOJA - 9932822 - 19 MM","imagen":"../img/trincheta-crossman.jpg","tipos":"Trincheta"},
-{"id":3,"precio":300,"titulo":"Disco Flap","descripcion":"115 MM X 1.0 MM ZIRCONICO PARA LIJADO","imagen":"../img/discoflap.jpg","tipos":"Disco"},
-{"id":4,"precio":700,"titulo":"Electrodo Conarco","descripcion":"13 A - 2.5 MM - 2.5 MM SUAVE Y ESTABLE","imagen":"../img/electrodo-conarco.jpg","tipos":"Electrodo"},
-{"id":5,"precio":5051,"titulo":"Trincheta Bahco","descripcion":"Retráctil Comportamiento 6 hojas 17cm","imagen":"../img/bahco-trincheta.webp","tipos":"Trincheta"},
-{"id":6,"precio":4190,"titulo":"Tijera Corta Tubo","descripcion":"Radial Tawak Tkt02 Aluminio PARA USO PROFESIONAL","imagen":"../img/tijeratawak.webp","tipos":"Tijera"}]
+[{
+        "id": 1,
+        "precio": 3200,
+        "titulo": "Tijera Corta Tubo",
+        "descripcion": "PVC CROSSMAN 1-5/8 - AUTOMATICA",
+        "imagen": "../img/tijeracorta-tubos.jpg",
+        "tipos": "Tijera"
+    },
+    {
+        "id": 2,
+        "precio": 400,
+        "titulo": "Trincheta Crossman",
+        "descripcion": "ECONO C/UNA HOJA - 9932822 - 19 MM",
+        "imagen": "../img/trincheta-crossman.jpg",
+        "tipos": "Trincheta"
+    },
+    {
+        "id": 3,
+        "precio": 300,
+        "titulo": "Disco Flap",
+        "descripcion": "115 MM X 1.0 MM ZIRCONICO PARA LIJADO",
+        "imagen": "../img/discoflap.jpg",
+        "tipos": "Disco"
+    },
+    {
+        "id": 4,
+        "precio": 700,
+        "titulo": "Electrodo Conarco",
+        "descripcion": "13 A - 2.5 MM - 2.5 MM SUAVE Y ESTABLE",
+        "imagen": "../img/electrodo-conarco.jpg",
+        "tipos": "Electrodo"
+    },
+    {
+        "id": 5,
+        "precio": 5051,
+        "titulo": "Trincheta Bahco",
+        "descripcion": "Retráctil Comportamiento 6 hojas 17cm",
+        "imagen": "../img/bahco-trincheta.webp",
+        "tipos": "Trincheta"
+    },
+    {
+        "id": 6,
+        "precio": 4190,
+        "titulo": "Tijera Corta Tubo",
+        "descripcion": "Radial Tawak Tkt02 Aluminio PARA USO PROFESIONAL",
+        "imagen": "../img/tijeratawak.webp",
+        "tipos": "Tijera"
+    }
+]

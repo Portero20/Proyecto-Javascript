@@ -332,24 +332,25 @@ if ("Carrito" in localStorage) { //si existe en el localstorage
 
 
 
-//Función para cargar datos para ferreteria
+//Función para cargar datos para ferreteria con async await, le decimos a js que es una función asincrona y todo lo que se trabaja dentro es asincrono
 
 async function cargarDatos(){
 
-  const pedido = await fetch("../json/ferreteria.json");
-  const datosJson = await pedido.json();
+  //Se ocupa la palabra await para simular sincronia, await espera a que la operacion termine para pasar a la siguiente actividad
+  const pedido = await fetch("../json/ferreteria.json"); //guardamos los datos de los productos de ferreteria
+  const datosJson = await pedido.json(); //datosJson para transformar a json
 
-  for (const generico of datosJson) {
+  for (const generico of datosJson) { //recorremos en un for of y lo pasamos a objeto literal
     
     tarjetas.push(new Productos(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad))
 
   }
 
-  tarjetasUI(tarjetas,"productosContainer")
+  tarjetasUI(tarjetas) //generación de la interfaz
 
 }
 
-cargarDatos();
+cargarDatos();  //llamamos a la función cargarDatos
 
 
 

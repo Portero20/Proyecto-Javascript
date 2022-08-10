@@ -207,7 +207,7 @@ function carritoMostrar(lista) {
   }
   sumardelCarrito();
 
-  //Query selector para cada una de las clases de las etiquetas a 
+  //Query selector para cada una de las clases de las etiquetas a, hacer un forEach con una función flecha y por cada boton le va a agregar la propiedad onClick y pasarle una función
 
   document.querySelectorAll(".btn-borrar").forEach(boton => boton.onclick = borrardelCarrito);
   document.querySelectorAll(".btn-añadir").forEach(boton => boton.onclick = añadirCarrito);
@@ -331,8 +331,9 @@ if ("CarritoSeco" in localStorage) { //si existe en el localstorage
 
 //Función para cargar datos enseco con async (forma mas simplificada de escribir el fetch)
 
-async function cargarDatosSeco(){  //
+async function cargarDatosSeco(){  
 
+  //Se ocupa la palabra await para simular sincronia, await espera a que la operacion termine para pasar a la siguiente actividad
   const pedido = await fetch("../json/enseco.json");  //lo traemos de manera local
   const datosJson = await pedido.json();   // lo transformamos en json
 
