@@ -382,7 +382,7 @@ function enviarDatos(lista) {
         `Compra nro ${datos.id} realizada correctamente`, //si sale todo bien dira compra realizada
         'success'
       )
-      vaciarCarrito();
+      vaciarCarrito(); //cuando apretemos confirmar el carrito se va a vaciar
 
     }).catch((datos) => {
 
