@@ -143,6 +143,8 @@ function seleccionamosProducto() {
 
         text: `Se agrego el producto ${seleccionamos.titulo} al carrito `,
 
+        avatar: "../img/carrito-de-compras.png",
+
         duration: 2000,
 
         gravity: "top",
@@ -226,6 +228,21 @@ function borrardelCarrito() {
   carritoEnseco.splice(posicion, 1); //eliminar una posicion en especifico y eliminamos solo uno, splice es un metodo destructivo
   carritoMostrar(carritoEnseco);
   localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //pisamos el valor viejo con el nuevo valor con el nuevo array sin ningun elemento
+
+  Toastify({
+
+    text: "Producto eliminado",
+
+    duration: 2000,
+
+    position: "left",
+
+
+    style: {
+      background: "black",
+    },
+
+  }).showToast();
 
 }
 

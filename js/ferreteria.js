@@ -114,6 +114,8 @@ function seleccionarProducto() {
 
         text: `Se agrego el producto ${seleccion.titulo} al carrito `,
 
+        avatar: "../img/carrito-de-compras.png",
+
         duration: 2000,
 
         gravity: "top",
@@ -198,6 +200,7 @@ function eliminarCarrito() {
     duration: 2000,
 
     position: "left",
+
 
     style: {
       background: "black",
