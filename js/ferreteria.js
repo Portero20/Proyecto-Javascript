@@ -28,6 +28,11 @@ class Productos {
     this.cantidad += valor; //permite agregar el valor en cantidades y restar el valor
 
   }
+  reiniciarCantidad(){
+
+    this.cantidad = 1;  //seteamos la cantidad en 1
+
+  }
 
 }
 
@@ -408,6 +413,10 @@ function enviarDatos(lista) {
 
 function vaciarCarrito() {
 
+
+  //recorremos el carrito con un forEach y cada producto le pasamos el metodo reiniciarCarrito
+
+  carrito.forEach((producto) => producto.reiniciarCantidad());
 
   //borramos el localstorage
 

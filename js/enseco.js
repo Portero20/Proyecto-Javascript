@@ -28,6 +28,11 @@ class Enseco {
     this.cantidad += valor;
 
   }
+  reiniciamosCantidad(){
+
+    this.cantidad = 1;  //seteamos la cantidad en 1
+
+  }
 
 }
 
@@ -419,6 +424,10 @@ function enviarLosDatos(lista) {
 function vaciarElCarrito() {
 
 
+  //recorremos el carrito con un forEach y cada producto le pasamos el metodo reiniciarCarrito
+
+  carritoEnseco.forEach((producto) => producto.reiniciamosCantidad());
+
   //borramos el localstorage
 
   localStorage.clear();
@@ -430,6 +439,7 @@ function vaciarElCarrito() {
   //llamamos a la función para generar la interfaz vacía
 
   carritoMostrar(carritoEnseco);
+
 
   
 }
