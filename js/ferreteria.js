@@ -1,4 +1,4 @@
-//Funcionalidad para ferreteria
+/* ---------------------- Funcionalidad para ferreteria --------------------- */
 class Productos {
 
   constructor(id, precio, titulo, descripcion, imagen, tipos, cantidad) {
@@ -421,6 +421,7 @@ function vaciarCarrito() {
 
   carritoHTML(carrito);
 
+  
 
 }
 

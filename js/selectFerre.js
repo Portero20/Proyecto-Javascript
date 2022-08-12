@@ -1,4 +1,5 @@
-//Select para Ferreteria
+/* ------------------------ Select para Ferreteria ------------------------ */
+
 let seleccion = document.getElementById("selectTipos")
 
 

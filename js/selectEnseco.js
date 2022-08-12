@@ -1,4 +1,5 @@
-//Select para construcción en seco
+/* -------------------- Select para construcción en seco -------------------- */
+
 let seleccion = document.getElementById("selectTipos")
 
 

@@ -1,4 +1,4 @@
-//Variables globales para el carrito de la ferreteria
+/* ----------- Variables globales para el carrito de la ferreteria ---------- */
 
 const carrito = [];
 

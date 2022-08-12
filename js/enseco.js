@@ -1,4 +1,4 @@
-//Funcionalidad para construcción en seco
+/* ----------------- Funcionalidad para construcción en seco ---------------- */
 class Enseco {
 
   constructor(id, precio, titulo, descripcion, imagen, tipos, cantidad) {
@@ -13,17 +13,17 @@ class Enseco {
 
 
   }
-  addCantidad() {
+  addCantidad() { //incrementar la cantidad
 
     this.cantidad++;
 
   }
-  subTotal() {
+  subTotal() { //multiplica el precio por la cantidad
 
     return this.precio * this.cantidad;
 
   }
-  agregarCantidad(valor) {
+  agregarCantidad(valor) { //sirve para sumar y restar
 
     this.cantidad += valor;
 
@@ -83,16 +83,16 @@ ensecoUI(seco) //Lo mostramos en el HTML
 
 
 //Buscamos el producto de construcción en seco
-buscarProducto.addEventListener("input", function () {
+buscarProducto.addEventListener("input", function () {  //llamamos al evento input y le pasamos tambien una función
 
-  const encontrados = seco.filter(producto => producto.titulo.includes(this.value.toUpperCase()))
+  //Buscamos por el nombre del producto, filter para que me busque uno o más productos, le pasamos includes para preguntar si existe el producto, en this.value estan los productos
+  const encontrados = seco.filter(producto => producto.titulo.includes(this.value.toUpperCase())) 
 
-
-  if (encontrados.length > 0) {
+  if (encontrados.length > 0) {  //encontrados.length es mayor a cero quiere decir que si hay algun valor y llamamos a la función
 
     ensecoUI(encontrados)
 
-  } else {
+  } else {  //en caso de que no se encuentre el producto
 
     divTarjetas.innerHTML =
       `<h1 class="txtNodispo">Producto no disponible</h1>
@@ -119,25 +119,25 @@ function seleccionamosProducto() {
     boton.addEventListener("click", function () {
 
 
-      let seleccionamos = carritoEnseco.find(producto => producto.id == this.id)
+      let seleccionamos = carritoEnseco.find(producto => producto.id == this.id) //find para buscar por el id (find busca un unico resultado)
 
 
 
       if (seleccionamos) {
 
-        seleccionamos.addCantidad();
+        seleccionamos.addCantidad();  //Me suma la cantidad solamente
 
       } else {
 
-        seleccionamos = seco.find(producto => producto.id == this.id)
+        seleccionamos = seco.find(producto => producto.id == this.id)  //me busca el producto por el id 
         carritoEnseco.push(seleccionamos)
 
 
       }
 
-      localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco))
+      localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)) //Actualizamos el localStorage
 
-      carritoMostrar(carritoEnseco)
+      carritoMostrar(carritoEnseco)  //llamamos a la función
 
       Toastify({
 
@@ -174,13 +174,13 @@ function seleccionamosProducto() {
 
 //Creamos una funcion carritoMostrar para que se vaya sumando los elementos en el carrito y mostrando
 
-function carritoMostrar(lista) {
+function carritoMostrar(lista) { //le pasamos como parametro la lista de productos que esta en el carrito
 
-  cantidadEnseco.innerHTML = lista.length;
-  productosCarritoSeco.innerHTML = "";
+  cantidadEnseco.innerHTML = lista.length; //lista.length porque length tiene la cantidad de posiciones que tiene el carrito
+  productosCarritoSeco.innerHTML = ""; //borramos lo que ya hay
 
 
-  for (const product of lista) {
+  for (const product of lista) { //recorremos
 
 
     let producto = document.createElement("div")
@@ -189,7 +189,7 @@ function carritoMostrar(lista) {
     <img class="imagenCarrito" src="${product.imagen}" height="200"> 
     <h3>${product.titulo}:</h3>
     <h3 class="separar">Precio: $ ${product.precio}</h3>
-    <h3 class="separar2">Cantidad:  ${product.cantidad}</>
+    <h3 class="separar2">Cantidad:  ${product.cantidad}</h3>
     <h3 class="separar3">Subtotal: $ ${product.subTotal()}</h3>
     
 
@@ -207,7 +207,7 @@ function carritoMostrar(lista) {
 
 
   }
-  sumardelCarrito();
+  sumardelCarrito(); //agregamos la llamada a la función para que se muestre el total
 
   //Query selector para cada una de las clases de las etiquetas a, hacer un forEach con una función flecha y por cada boton le va a agregar la propiedad onClick y pasarle una función
 
@@ -229,7 +229,7 @@ function borrardelCarrito() {
   carritoMostrar(carritoEnseco);
   localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //pisamos el valor viejo con el nuevo valor con el nuevo array sin ningun elemento
 
-  Toastify({
+  Toastify({ //toastify para mostrar el producto eliminado
 
     text: "Producto eliminado",
 
@@ -258,9 +258,9 @@ function añadirCarrito() {
 
   this.parentNode.children[4].innerHTML = "Subtotal: " + producto.subTotal(); //parentNode es para subir de nivel y children para obtener el hijo y modificamos el html
 
-  sumardelCarrito();
+  sumardelCarrito(); //lo mostramos para que se modifique el total
 
-  localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos el localstorage
+  localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos la cantidad en el localstorage
 
 
 
@@ -286,7 +286,7 @@ function restarCarrito() {
     localStorage.setItem("CarritoSeco", JSON.stringify(carritoEnseco)); //modificamos el localstorage
 
 
-  } else {
+  } else {  //si no mostrara un alert que diga que no se puede agregar 0 cantidades
 
 
     Swal.fire({
@@ -306,8 +306,7 @@ function restarCarrito() {
 
 confirm.onclick = () => {
 
-  enviarLosDatos();
-
+  enviarLosDatos(); //llamamos a la función
 
 }
 
@@ -317,7 +316,7 @@ confirm.onclick = () => {
 
 function sumardelCarrito() {
 
-  //Creamos variable total, a carrito le pasamos reduce para que recorra y sume cada uno de los elementos que hay, += sumale lo que ya hay y suma producto.subTotal() y decirle en cuanto va a empezar la variable que quiero sumar
+  //Creamos variable totalEnseco, a carrito le pasamos reduce para que recorra y sume cada uno de los elementos que hay, producto seria el producto que estoy recorriendo, += sumale lo que ya hay y suma producto.subTotal() y decirle en cuanto va a empezar la variable que quiero sumar
 
   let totalEnseco = carritoEnseco.reduce((totalCompra, producto) => totalCompra += producto.subTotal(), 0)
   //no tenemos que pasarle llaves porque dara undefined, las llaves no puede interpetrar donde empieza y termina la estructura
@@ -348,31 +347,30 @@ if ("CarritoSeco" in localStorage) { //si existe en el localstorage
 
 //Función para cargar datos enseco con async (forma mas simplificada de escribir el fetch)
 
-async function cargarDatosSeco(){  
+async function cargarDatosSeco() {
 
   //Se ocupa la palabra await para simular sincronia, await espera a que la operacion termine para pasar a la siguiente actividad
-  const pedido = await fetch("../json/enseco.json");  //lo traemos de manera local
-  const datosJson = await pedido.json();   // lo transformamos en json
+  const pedido = await fetch("../json/enseco.json"); //lo traemos de manera local
+  const datosJson = await pedido.json(); // lo transformamos en json
 
-  for (const generico of datosJson) {  //lo recorremos con un for of
-    
+  for (const generico of datosJson) { //lo recorremos con un for of
+
     seco.push(new Enseco(generico.id, generico.precio, generico.titulo, generico.descripcion, generico.imagen, generico.tipos, generico.cantidad)) //pusheamos en un nuevo array
 
   }
 
-  ensecoUI(seco,"productosEnseco")
+  ensecoUI(seco, "productosEnseco")
 
 }
 
-cargarDatosSeco();  //lo mostramos en la interfaz de construcción en seco
+cargarDatosSeco(); //lo mostramos en la interfaz de construcción en seco
 
 
 
 
-//Función para realizar un POST para en seco
+//Función para realizar un POST para en seco (enviar datos)
 
-
-function enviarLosDatos(lista) {
+function enviarLosDatos(lista) { 
 
   fetch("https://jsonplaceholder.typicode.com/posts", {
 
@@ -396,14 +394,15 @@ function enviarLosDatos(lista) {
         `Compra nro ${datos.id} realizada correctamente`, //si sale todo bien dira compra realizada
         'success'
       )
-      vaciarElCarrito();  //llamamos a la función vaciarElCarrito para cuando apriete confirmar vacie el carrito
+      vaciarElCarrito(); //llamamos a la función vaciarElCarrito para cuando apriete confirmar vacie el carrito
+
 
     }).catch((datos) => {
 
 
       Swal.fire(
         'Compra rechazada',
-        `Compra nro ${datos.id} fue rechadaza`, //si sale todo mal dira compra rechazada
+        `Compra nro ${datos.id} fue rechazada`, //si sale todo mal dira compra rechazada
         'error'
       )
 
@@ -432,5 +431,5 @@ function vaciarElCarrito() {
 
   carritoMostrar(carritoEnseco);
 
-
+  
 }

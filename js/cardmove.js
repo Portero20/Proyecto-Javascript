@@ -1,3 +1,5 @@
+/* --------------- Sección "los más vendidos" para los botones -------------- */
+
 const imagenes = [
 
     {
