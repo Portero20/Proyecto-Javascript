@@ -1,84 +1,6 @@
-//Medias Medios de pago index (480px)
-@media (max-width:480px) {
+@media(min-width:280px) and (max-width:375px) {
+    
 
-
-    .metodos--icono1,
-    .metodos--icono2,
-    .metodos--icono3,
-    .metodos--icono4,
-    .metodos--icono5,
-    .metodos--icono6 {
-
-        margin-left: 200px;
-        margin-top: 100px;
-        margin-bottom: 150px;
-
-
-    }
-
-    .grillaCards {
-
-        display: grid;
-        grid-template-columns: 2fr;
-        padding-left: 130px;
-        gap: 30px;
-
-        #mediaCate {
-
-            margin-left: 30px;
-            margin-bottom: 40px;
-
-        }
-
-
-    }
-
-
-}
-
-//Medias nuestros empleados index (480px)
-
-@media (max-width:480px) {
-
-    .textoEmpleados {
-
-        margin-left: 180px;
-        margin-bottom: 50px;
-        
-
-
-    }
-
-    .fondoEmpleados {
-
-        display: grid;
-        margin-left: -65px;
-        grid-template-columns: auto;
-        background: #f3f1f5;
-        padding: 10px;
-        gap: 20px;
-
-
-    }
-
-
-
-}
-
-
-@media (min-width: 768px){
-
-    .btnCompra{
-
-        padding: .75rem 1.5rem;
-        
-
-    }
-
-}
-
-
-@media (max-width:480px){
 
     .fondo{
 
@@ -89,11 +11,13 @@
             .txtInicio {
     
                 text-align: center;
-                margin: 40px;
-                margin-left: 50px;
+                margin: -30px;
+                margin-left: -10px;
                 color: white;
                 font-weight: bolder;
-                font-size: 50px;
+                font-size: 35px;
+                margin-top: 30px;
+                margin-left: -25px;
     
     
     
@@ -102,10 +26,10 @@
             .subInicio {
     
                 color: white;
-                font-size: 50px;
+                font-size: 35px;
                 text-align: center;
-                margin: 10px;
-                margin-top: 40px;
+                margin: -20px;
+                margin-top: 80px;
                 margin-bottom: 80px;
                 font-weight: bolder;
     
@@ -115,32 +39,21 @@
 
     }
 
-}
-
-
-@media(max-width:480px){
-
-    .categorias{
-
-        margin-top: 35px;
-
-    }
-
-}
-
-
-@media(max-width:480px){
-
     .background-top{
 
         .container{
 
+            width: 250px;
+            margin-left: -45px;
 
             .tarjeta{
+
+                height: 450px;
+                
     
                 .randomBtn{
         
-                    margin-left: 85px;
+                    margin-left: 27px;
         
                 }
         
@@ -150,14 +63,96 @@
 
 
     }
-    
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 25px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left: -15px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: -5px;
+            margin-bottom: 40px;
+            font-size: 35px;
+
+        }
+
+        .card{
+
+            margin-left: -20px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 180px;
+
+        }
+
+
+        margin-left: -180px;
+
+
+    }
 
 }
 
 
-/* ---------------- //Media queries para index iphone (375px) ---------------- */
 
-@media (max-width:375px){
+
+/* ---------------- //Media queries para index iphone (375px a 414px) ---------------- */
+
+@media(min-width:375px) and (max-width:414px) {
+    
+
 
     .fondo{
 
@@ -195,13 +190,6 @@
 
     }
 
-}
-
-
-
-
-@media(max-width:375px){
-
     .background-top{
 
         .container{
@@ -221,11 +209,6 @@
 
 
     }
-    
-
-}
-
-@media (max-width:375px) {
 
     .tarjeta{
 
@@ -261,13 +244,6 @@
 
     }
 
-
-
-}
-
-
-@media(max-width:375px){
-
     .grillaCards {
 
         display: grid;
@@ -286,31 +262,29 @@
 
     }
 
+    .metodosdePago{
 
-}
+        .mediosPago{
 
-@media (max-width:480px) {
+            margin-left: 140px;
+
+        }
 
 
-    .metodos--icono1,
-    .metodos--icono2,
-    .metodos--icono3,
-    .metodos--icono4,
-    .metodos--icono5,
-    .metodos--icono6 {
-
-        margin-left: 70px;
-        margin-top: 100px;
-        margin-bottom: 150px;
+        margin-left: -130px;
 
 
     }
+
+    
 }
 
 
-/* ---------------- //Media queries para index iphone (414px) ---------------- */
+/* ---------------- //Media queries para index iphone (414px a 480px) ---------------- */
 
-@media (max-width:414px){
+@media(min-width:414px) and (max-width:480px) {
+    
+
 
     .fondo{
 
@@ -321,8 +295,8 @@
             .txtInicio {
     
                 text-align: center;
-                margin: -15px;
-                margin-left: -30px;
+                margin: -10px;
+                margin-left: -10px;
                 color: white;
                 font-weight: bolder;
                 font-size: 50px;
@@ -336,181 +310,132 @@
     
                 color: white;
                 font-size: 50px;
-                text-align: center;
-                margin: -30px;
-                margin-left: -45px;
-                margin-top: 80px;
-                margin-bottom: 80px;
-                font-weight: bolder;
-    
-            }
-    
-        }
-
-    }
-
-}
-
-
-
-
-@media(max-width:414px){
-
-    .background-top{
-
-        .container{
-
-
-            .tarjeta{
-    
-                .randomBtn{
-        
-                    margin-left: 35px;
-        
-                }
-        
-            }
-    
-        }
-
-
-    }
-    
-
-}
-
-@media (max-width:414px) {
-
-    .tarjeta{
-
-        #persona-img{
-
-            margin-left: -5px;
-            width: 200px;
-
-
-        }
-
-    }
-
-
-    .textoEmpleados {
-
-        margin-left: 185px;
-        margin-bottom: 50px;
-        
-
-
-    }
-
-    .fondoEmpleados {
-
-        display: grid;
-        margin-left: -170px;
-        grid-template-columns: auto;
-        background: #f3f1f5;
-        padding: 50px;
-        gap: 20px;
-
-
-    }
-
-
-
-}
-
-
-@media(max-width:414px){
-
-    .grillaCards {
-
-        display: grid;
-        grid-template-columns: 2fr;
-        padding-left: 130px;
-        margin-left: -60px;
-        gap: 30px;
-
-        #mediaCate {
-
-            margin-left: 30px;
-            margin-bottom: 40px;
-
-        }
-
-
-    }
-
-
-}
-
-@media (max-width:414px) {
-
-
-    .metodos--icono1,
-    .metodos--icono2,
-    .metodos--icono3,
-    .metodos--icono4,
-    .metodos--icono5,
-    .metodos--icono6 {
-
-        margin-left: 70px;
-        margin-top: 100px;
-        margin-bottom: 150px;
-
-
-    }
-}
-
-@media(max-width:414px){
-
-
-    .background-top{
-
-        .masComprados{
-
-            margin-left: -40px;
-
-        }
-
-        .container{
-
-
-            .tarjeta{
-
-                margin-left: -10px;
-    
-                .randomBtn{
-        
-                    margin-left: 65px;
-        
-                }
-        
-            }
-    
-        }
-
-
-    }
-
-
-}
-
-
-/* ---------------- //Media queries para index samsung galaxy A51/71 (412px) ---------------- */
-
-
-@media (max-width:412px){
-
-    .fondo{
-
-        div {
-
-
-
-            .txtInicio {
-    
                 text-align: center;
                 margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 48px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 210px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: -170px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left:220px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -60px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 30px;
+            margin-bottom: 40px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+        .mediosPago{
+
+            margin-left: 130px;
+
+        }
+
+
+        margin-left: -120px;
+
+
+    }
+
+    
+
+
+}
+
+/* ---------------- //Media queries para index iphone (480px a 550px) ---------------- */
+
+@media(min-width:480px) and (max-width:550px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
                 margin-left: -10px;
                 color: white;
                 font-weight: bolder;
@@ -526,8 +451,7 @@
                 color: white;
                 font-size: 50px;
                 text-align: center;
-                margin: -50px;
-                margin-left: -25px;
+                margin: -20px;
                 margin-top: 80px;
                 margin-bottom: 80px;
                 font-weight: bolder;
@@ -538,13 +462,6 @@
 
     }
 
-}
-
-
-
-
-@media(max-width:412px){
-
     .background-top{
 
         .container{
@@ -554,7 +471,7 @@
     
                 .randomBtn{
         
-                    margin-left: 35px;
+                    margin-left: 85px;
         
                 }
         
@@ -564,11 +481,6 @@
 
 
     }
-    
-
-}
-
-@media (max-width:412px) {
 
     .tarjeta{
 
@@ -585,7 +497,7 @@
 
     .textoEmpleados {
 
-        margin-left: 185px;
+        margin-left: 210px;
         margin-bottom: 50px;
         
 
@@ -595,28 +507,27 @@
     .fondoEmpleados {
 
         display: grid;
-        margin-left: -145px;
+        margin-left: -135px;
         grid-template-columns: auto;
         background: #f3f1f5;
         padding: 50px;
         gap: 20px;
 
+        .card1{
+
+            margin-left:220px;
+
+        }
+
 
     }
-
-
-
-}
-
-
-@media(max-width:412px){
 
     .grillaCards {
 
         display: grid;
         grid-template-columns: 2fr;
         padding-left: 130px;
-        margin-left: -50px;
+        margin-left: -10px;
         gap: 30px;
 
         #mediaCate {
@@ -629,48 +540,74 @@
 
     }
 
-
-}
-
-@media (max-width:412px) {
+    .metodosdePago{
 
 
-    .metodos--icono1,
-    .metodos--icono2,
-    .metodos--icono3,
-    .metodos--icono4,
-    .metodos--icono5,
-    .metodos--icono6 {
+        .mediosPago{
+            margin-left: 100px;
 
-        margin-left: 78px;
-        margin-top: 100px;
-        margin-bottom: 150px;
+        }
+
+
+        margin-left: -80px;
 
 
     }
+
 }
 
-@media(max-width:412px){
+/* ---------------- //Media queries para index iphone (480px a 550px) ---------------- */
 
+@media(min-width:550px) and (max-width:650px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
 
     .background-top{
-
-        .masComprados{
-
-            margin-left: -15px;
-
-        }
 
         .container{
 
 
             .tarjeta{
-
-                margin-left: 10px;
     
                 .randomBtn{
         
-                    margin-left: 65px;
+                    margin-left: 103px;
         
                 }
         
@@ -681,5 +618,1071 @@
 
     }
 
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 210px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: -135px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left:220px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 30px;
+            margin-bottom: 40px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 100px;
+
+        }
+
+
+        margin-left: -80px;
+
+
+    }
 
 }
+
+
+/* ---------------- //Media queries para index iphone (650px a 750px) ---------------- */
+
+@media(min-width:650px) and (max-width:750px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 195px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: -45px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left:220px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 30px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 100px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 180px;
+
+        }
+
+
+        margin-left: -170px;
+
+
+    }
+
+}
+
+
+/* ---------------- //Media queries para index iphone (650px a 750px) ---------------- */
+
+@media(min-width:750px) and (max-width:850px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 195px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left:220px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 75px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 150px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 140px;
+
+        }
+
+
+        margin-left: -120px;
+
+
+    }
+
+}
+
+
+/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+
+@media(min-width:850px) and (max-width:950px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 225px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left: 260px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 115px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 185px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 90px;
+
+        }
+
+
+        margin-left: -90px;
+
+
+    }
+
+}
+
+/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+
+@media(min-width:950px) and (max-width:1020px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 275px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left: 315px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 185px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 265px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 50px;
+
+        }
+
+
+        margin-left: -30px;
+
+
+    }
+
+}
+
+/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+
+@media(min-width:1020px) and (max-width:1033px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 285px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left: 335px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 185px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 265px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 180px;
+
+        }
+
+
+        margin-left: -160px;
+
+
+    }
+
+}
+
+@media(min-width:1033px) and (max-width:1200px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 285px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left: 335px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -10px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 185px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 265px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 180px;
+
+        }
+
+
+        margin-left: -160px;
+
+
+    }
+
+}
+
+
+@media(min-width:1200px) and (max-width:1250px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 103px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 35px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: auto auto auto auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+        .card1{
+
+            margin-left: 35px;
+
+        }
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        padding-left: 130px;
+        margin-left: -410px;
+        gap: 5px;
+
+        #mediaCate {
+
+            margin-left: 315px;
+            margin-bottom: 40px;
+
+        }
+
+        .card{
+
+            margin-left: 5px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+
+        .mediosPago{
+            margin-left: 100px;
+
+        }
+
+
+        margin-left: -70px;
+
+
+    }
+
+}
+

@@ -570,78 +570,79 @@ body {
   transform-origin: bottom left;
 }
 
-@media (max-width: 480px) {
-  .metodos--icono1,
-.metodos--icono2,
-.metodos--icono3,
-.metodos--icono4,
-.metodos--icono5,
-.metodos--icono6 {
-    margin-left: 200px;
-    margin-top: 100px;
-    margin-bottom: 150px;
+@media (min-width: 280px) and (max-width: 375px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -30px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-left: -25px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container {
+    width: 250px;
+    margin-left: -45px;
+  }
+  .background-top .container .tarjeta {
+    height: 450px;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 27px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 25px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: -15px;
   }
   .grillaCards {
     display: grid;
     grid-template-columns: 2fr;
     padding-left: 130px;
+    margin-left: -10px;
     gap: 30px;
   }
   .grillaCards #mediaCate {
-    margin-left: 30px;
+    margin-left: -5px;
     margin-bottom: 40px;
+    font-size: 35px;
   }
-}
-@media (max-width: 480px) {
-  .textoEmpleados {
+  .grillaCards .card {
+    margin-left: -20px;
+  }
+  .metodosdePago {
+    margin-left: -180px;
+  }
+  .metodosdePago .mediosPago {
     margin-left: 180px;
-    margin-bottom: 50px;
-  }
-  .fondoEmpleados {
-    display: grid;
-    margin-left: -65px;
-    grid-template-columns: auto;
-    background: #f3f1f5;
-    padding: 10px;
-    gap: 20px;
   }
 }
-@media (min-width: 768px) {
-  .btnCompra {
-    padding: 0.75rem 1.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .fondo div .txtInicio {
-    text-align: center;
-    margin: 40px;
-    margin-left: 50px;
-    color: white;
-    font-weight: bolder;
-    font-size: 50px;
-  }
-  .fondo div .subInicio {
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    margin: 10px;
-    margin-top: 40px;
-    margin-bottom: 80px;
-    font-weight: bolder;
-  }
-}
-@media (max-width: 480px) {
-  .categorias {
-    margin-top: 35px;
-  }
-}
-@media (max-width: 480px) {
-  .background-top .container .tarjeta .randomBtn {
-    margin-left: 85px;
-  }
-}
-/* ---------------- //Media queries para index iphone (375px) ---------------- */
-@media (max-width: 375px) {
+/* ---------------- //Media queries para index iphone (375px a 414px) ---------------- */
+@media (min-width: 375px) and (max-width: 414px) {
   .fondo div .txtInicio {
     text-align: center;
     margin: -10px;
@@ -660,13 +661,9 @@ body {
     margin-bottom: 80px;
     font-weight: bolder;
   }
-}
-@media (max-width: 375px) {
   .background-top .container .tarjeta .randomBtn {
     margin-left: 35px;
   }
-}
-@media (max-width: 375px) {
   .tarjeta #persona-img {
     margin-left: -5px;
     width: 200px;
@@ -683,8 +680,6 @@ body {
     padding: 50px;
     gap: 20px;
   }
-}
-@media (max-width: 375px) {
   .grillaCards {
     display: grid;
     grid-template-columns: 2fr;
@@ -696,25 +691,19 @@ body {
     margin-left: 30px;
     margin-bottom: 40px;
   }
-}
-@media (max-width: 480px) {
-  .metodos--icono1,
-.metodos--icono2,
-.metodos--icono3,
-.metodos--icono4,
-.metodos--icono5,
-.metodos--icono6 {
-    margin-left: 70px;
-    margin-top: 100px;
-    margin-bottom: 150px;
+  .metodosdePago {
+    margin-left: -130px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 140px;
   }
 }
-/* ---------------- //Media queries para index iphone (414px) ---------------- */
-@media (max-width: 414px) {
+/* ---------------- //Media queries para index iphone (414px a 480px) ---------------- */
+@media (min-width: 414px) and (max-width: 480px) {
   .fondo div .txtInicio {
     text-align: center;
-    margin: -15px;
-    margin-left: -30px;
+    margin: -10px;
+    margin-left: -10px;
     color: white;
     font-weight: bolder;
     font-size: 50px;
@@ -723,78 +712,57 @@ body {
   .fondo div .subInicio {
     color: white;
     font-size: 50px;
-    text-align: center;
-    margin: -30px;
-    margin-left: -45px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    font-weight: bolder;
-  }
-}
-@media (max-width: 414px) {
-  .background-top .container .tarjeta .randomBtn {
-    margin-left: 35px;
-  }
-}
-@media (max-width: 414px) {
-  .tarjeta #persona-img {
-    margin-left: -5px;
-    width: 200px;
-  }
-  .textoEmpleados {
-    margin-left: 185px;
-    margin-bottom: 50px;
-  }
-  .fondoEmpleados {
-    display: grid;
-    margin-left: -170px;
-    grid-template-columns: auto;
-    background: #f3f1f5;
-    padding: 50px;
-    gap: 20px;
-  }
-}
-@media (max-width: 414px) {
-  .grillaCards {
-    display: grid;
-    grid-template-columns: 2fr;
-    padding-left: 130px;
-    margin-left: -60px;
-    gap: 30px;
-  }
-  .grillaCards #mediaCate {
-    margin-left: 30px;
-    margin-bottom: 40px;
-  }
-}
-@media (max-width: 414px) {
-  .metodos--icono1,
-.metodos--icono2,
-.metodos--icono3,
-.metodos--icono4,
-.metodos--icono5,
-.metodos--icono6 {
-    margin-left: 70px;
-    margin-top: 100px;
-    margin-bottom: 150px;
-  }
-}
-@media (max-width: 414px) {
-  .background-top .masComprados {
-    margin-left: -40px;
-  }
-  .background-top .container .tarjeta {
-    margin-left: -10px;
-  }
-  .background-top .container .tarjeta .randomBtn {
-    margin-left: 65px;
-  }
-}
-/* ---------------- //Media queries para index samsung galaxy A51/71 (412px) ---------------- */
-@media (max-width: 412px) {
-  .fondo div .txtInicio {
     text-align: center;
     margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 48px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 210px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: -170px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 220px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -60px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+  .metodosdePago {
+    margin-left: -120px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 130px;
+  }
+}
+/* ---------------- //Media queries para index iphone (480px a 550px) ---------------- */
+@media (min-width: 480px) and (max-width: 550px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
     margin-left: -10px;
     color: white;
     font-weight: bolder;
@@ -805,70 +773,548 @@ body {
     color: white;
     font-size: 50px;
     text-align: center;
-    margin: -50px;
-    margin-left: -25px;
+    margin: -20px;
     margin-top: 80px;
     margin-bottom: 80px;
     font-weight: bolder;
   }
-}
-@media (max-width: 412px) {
   .background-top .container .tarjeta .randomBtn {
-    margin-left: 35px;
+    margin-left: 85px;
   }
-}
-@media (max-width: 412px) {
   .tarjeta #persona-img {
     margin-left: -5px;
     width: 200px;
   }
   .textoEmpleados {
-    margin-left: 185px;
+    margin-left: 210px;
     margin-bottom: 50px;
   }
   .fondoEmpleados {
     display: grid;
-    margin-left: -145px;
+    margin-left: -135px;
     grid-template-columns: auto;
     background: #f3f1f5;
     padding: 50px;
     gap: 20px;
   }
-}
-@media (max-width: 412px) {
+  .fondoEmpleados .card1 {
+    margin-left: 220px;
+  }
   .grillaCards {
     display: grid;
     grid-template-columns: 2fr;
     padding-left: 130px;
-    margin-left: -50px;
+    margin-left: -10px;
     gap: 30px;
   }
   .grillaCards #mediaCate {
     margin-left: 30px;
     margin-bottom: 40px;
   }
-}
-@media (max-width: 412px) {
-  .metodos--icono1,
-.metodos--icono2,
-.metodos--icono3,
-.metodos--icono4,
-.metodos--icono5,
-.metodos--icono6 {
-    margin-left: 78px;
-    margin-top: 100px;
-    margin-bottom: 150px;
+  .metodosdePago {
+    margin-left: -80px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 100px;
   }
 }
-@media (max-width: 412px) {
-  .background-top .masComprados {
-    margin-left: -15px;
+/* ---------------- //Media queries para index iphone (480px a 550px) ---------------- */
+@media (min-width: 550px) and (max-width: 650px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
   }
-  .background-top .container .tarjeta {
-    margin-left: 10px;
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
   }
   .background-top .container .tarjeta .randomBtn {
-    margin-left: 65px;
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 210px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: -135px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 220px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+  .metodosdePago {
+    margin-left: -80px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 100px;
+  }
+}
+/* ---------------- //Media queries para index iphone (650px a 750px) ---------------- */
+@media (min-width: 650px) and (max-width: 750px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 195px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: -45px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 220px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 100px;
+  }
+  .metodosdePago {
+    margin-left: -170px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 180px;
+  }
+}
+/* ---------------- //Media queries para index iphone (650px a 750px) ---------------- */
+@media (min-width: 750px) and (max-width: 850px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 195px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 220px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 75px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 150px;
+  }
+  .metodosdePago {
+    margin-left: -120px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 140px;
+  }
+}
+/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+@media (min-width: 850px) and (max-width: 950px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 225px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 260px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 115px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 185px;
+  }
+  .metodosdePago {
+    margin-left: -90px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 90px;
+  }
+}
+/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+@media (min-width: 950px) and (max-width: 1020px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 275px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 315px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 185px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 265px;
+  }
+  .metodosdePago {
+    margin-left: -30px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 50px;
+  }
+}
+/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+@media (min-width: 1020px) and (max-width: 1033px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 285px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 335px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 185px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 265px;
+  }
+  .metodosdePago {
+    margin-left: -160px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 180px;
+  }
+}
+@media (min-width: 1033px) and (max-width: 1200px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 285px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 335px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -10px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 185px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 265px;
+  }
+  .metodosdePago {
+    margin-left: -160px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 180px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1250px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 103px;
+  }
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 35px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto auto auto auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+  .fondoEmpleados .card1 {
+    margin-left: 35px;
+  }
+  .grillaCards {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding-left: 130px;
+    margin-left: -410px;
+    gap: 5px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 315px;
+    margin-bottom: 40px;
+  }
+  .grillaCards .card {
+    margin-left: 5px;
+  }
+  .metodosdePago {
+    margin-left: -70px;
+  }
+  .metodosdePago .mediosPago {
+    margin-left: 100px;
   }
 }
 
