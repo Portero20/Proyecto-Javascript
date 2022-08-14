@@ -570,19 +570,6 @@ body {
   transform-origin: bottom left;
 }
 
-@media (max-width: 768px) {
-  .footer-containr {
-    padding: 2rem;
-    flex-direction: column;
-  }
-  .footer-content-container {
-    width: 100%;
-    padding: 2rem 0;
-    border-bottom: 1px solid #2a2a2a;
-    justify-content: center;
-    align-items: center;
-  }
-}
 @media (max-width: 480px) {
   .metodos--icono1,
 .metodos--icono2,
@@ -646,6 +633,161 @@ body {
 @media (max-width: 480px) {
   .categorias {
     margin-top: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 85px;
+  }
+}
+/* ---------------- //Media queries para index iphone (375px) ---------------- */
+@media (max-width: 375px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -10px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+}
+@media (max-width: 375px) {
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 375px) {
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 185px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: -170px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -60px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .metodos--icono1,
+.metodos--icono2,
+.metodos--icono3,
+.metodos--icono4,
+.metodos--icono5,
+.metodos--icono6 {
+    margin-left: 70px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+}
+/* ---------------- //Media queries para index iphone (414px) ---------------- */
+@media (max-width: 414px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -15px;
+    margin-left: -30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -30px;
+    margin-left: -45px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+}
+@media (max-width: 414px) {
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 414px) {
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 185px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: -170px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+}
+@media (max-width: 414px) {
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -60px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 414px) {
+  .metodos--icono1,
+.metodos--icono2,
+.metodos--icono3,
+.metodos--icono4,
+.metodos--icono5,
+.metodos--icono6 {
+    margin-left: 70px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 414px) {
+  .background-top .masComprados {
+    margin-left: -40px;
+  }
+  .background-top .container .tarjeta {
+    margin-left: -10px;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 65px;
   }
 }
 
