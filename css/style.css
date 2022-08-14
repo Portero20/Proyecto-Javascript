@@ -790,5 +790,86 @@ body {
     margin-left: 65px;
   }
 }
+/* ---------------- //Media queries para index samsung galaxy A51/71 (412px) ---------------- */
+@media (max-width: 412px) {
+  .fondo div .txtInicio {
+    text-align: center;
+    margin: -20px;
+    margin-left: -10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .fondo div .subInicio {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: -50px;
+    margin-left: -25px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+}
+@media (max-width: 412px) {
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 412px) {
+  .tarjeta #persona-img {
+    margin-left: -5px;
+    width: 200px;
+  }
+  .textoEmpleados {
+    margin-left: 185px;
+    margin-bottom: 50px;
+  }
+  .fondoEmpleados {
+    display: grid;
+    margin-left: -145px;
+    grid-template-columns: auto;
+    background: #f3f1f5;
+    padding: 50px;
+    gap: 20px;
+  }
+}
+@media (max-width: 412px) {
+  .grillaCards {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-left: 130px;
+    margin-left: -50px;
+    gap: 30px;
+  }
+  .grillaCards #mediaCate {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 412px) {
+  .metodos--icono1,
+.metodos--icono2,
+.metodos--icono3,
+.metodos--icono4,
+.metodos--icono5,
+.metodos--icono6 {
+    margin-left: 78px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 412px) {
+  .background-top .masComprados {
+    margin-left: -15px;
+  }
+  .background-top .container .tarjeta {
+    margin-left: 10px;
+  }
+  .background-top .container .tarjeta .randomBtn {
+    margin-left: 65px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
