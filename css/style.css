@@ -641,6 +641,12 @@ body {
   .metodosdePago .mediosPago {
     margin-left: 180px;
   }
+  .metodosdePago .metodos--icono3 {
+    margin-top: -20px;
+  }
+  .metodosdePago .metodos--icono2 {
+    margin-top: -30px;
+  }
 }
 /* ---------------- //Media queries para index iphone (375px a 414px) ---------------- */
 @media (min-width: 375px) and (max-width: 414px) {
@@ -736,7 +742,7 @@ body {
     margin-left: -32px;
   }
   .background-top .container .tarjeta .randomBtn {
-    margin-left: 55px;
+    margin-left: 76px;
   }
   .tarjeta #persona-img {
     margin-left: -5px;
