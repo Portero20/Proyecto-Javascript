@@ -727,12 +727,12 @@ body {
     width: 200px;
   }
   .textoEmpleados {
-    margin-left: 228px;
+    margin-left: 182px;
     margin-bottom: 50px;
   }
   .fondoEmpleados {
     display: grid;
-    margin-left: -135px;
+    margin-left: -145px;
     grid-template-columns: auto;
     background: #f3f1f5;
     padding: 50px;
