@@ -1,3 +1,5 @@
+/* ---------------- //Media queries para index iphone (280px a 375px) ---------------- */
+
 @media(min-width:280px) and (max-width:375px) {
     
 
@@ -278,6 +280,141 @@
 
     
 }
+
+/* ---------------- //Media queries para index iphone (412px a 414px) ---------------- */
+
+@media(min-width:412px) and (max-width:414px) {
+    
+
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: -10px;
+                margin-left: -10px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+                margin-top: 30px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: -20px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+    .background-top{
+
+        .container{
+
+
+            .tarjeta{
+    
+                .randomBtn{
+        
+                    margin-left: 35px;
+        
+                }
+        
+            }
+    
+        }
+
+
+    }
+
+    .tarjeta{
+
+        #persona-img{
+
+            margin-left: -5px;
+            width: 200px;
+
+
+        }
+
+    }
+
+
+    .textoEmpleados {
+
+        margin-left: 228px;
+        margin-bottom: 50px;
+        
+
+
+    }
+
+    .fondoEmpleados {
+
+        display: grid;
+        margin-left: -135px;
+        grid-template-columns: auto;
+        background: #f3f1f5;
+        padding: 50px;
+        gap: 20px;
+
+
+    }
+
+    .grillaCards {
+
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-left: 130px;
+        margin-left: -45px;
+        gap: 30px;
+
+        #mediaCate {
+
+            margin-left: 25px;
+            margin-bottom: 40px;
+
+        }
+
+
+    }
+
+    .metodosdePago{
+
+        .mediosPago{
+
+            margin-left: 140px;
+
+        }
+
+
+        margin-left: -130px;
+
+
+    }
+
+    
+}
+
+
+
+
 
 
 /* ---------------- //Media queries para index iphone (414px a 480px) ---------------- */
@@ -1121,7 +1258,7 @@
 
 }
 
-/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+/* ---------------- //Media queries para index iphone (950px a 1020px) ---------------- */
 
 @media(min-width:950px) and (max-width:1020px) {
     
@@ -1263,7 +1400,7 @@
 
 }
 
-/* ---------------- //Media queries para index iphone (850px a 950px) ---------------- */
+/* ---------------- //Media queries para index iphone (1020px a 1033px) ---------------- */
 
 @media(min-width:1020px) and (max-width:1033px) {
     
@@ -1405,6 +1542,9 @@
 
 }
 
+
+/* ---------------- //Media queries para index iphone (1033px a 1200px) ---------------- */
+
 @media(min-width:1033px) and (max-width:1200px) {
     
 
@@ -1545,6 +1685,8 @@
 
 }
 
+
+/* ---------------- //Media queries para index iphone (1200px a 1250px) ---------------- */
 
 @media(min-width:1200px) and (max-width:1250px) {
     
