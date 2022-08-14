@@ -64,7 +64,9 @@
 
     .textoEmpleados {
 
-        margin-left: 235px;
+        margin-left: 180px;
+        margin-bottom: 50px;
+        
 
 
     }
@@ -72,10 +74,10 @@
     .fondoEmpleados {
 
         display: grid;
-        margin-left: -150px;
+        margin-left: -65px;
         grid-template-columns: auto;
         background: #f3f1f5;
-        padding: 100px;
+        padding: 10px;
         gap: 20px;
 
 
@@ -91,6 +93,57 @@
     .btnCompra{
 
         padding: .75rem 1.5rem;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .fondo{
+
+        div {
+
+
+
+            .txtInicio {
+    
+                text-align: center;
+                margin: 40px;
+                margin-left: 50px;
+                color: white;
+                font-weight: bolder;
+                font-size: 50px;
+    
+    
+    
+            }
+    
+            .subInicio {
+    
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin: 10px;
+                margin-top: 40px;
+                margin-bottom: 80px;
+                font-weight: bolder;
+    
+            }
+    
+        }
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .categorias{
+
+        margin-top: 35px;
 
     }
 
