@@ -1807,9 +1807,10 @@ body {
   .moverBadge {
     margin-left: 183px;
     width: 80px;
+    margin-top: -75px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
@@ -1847,11 +1848,11 @@ body {
     height: 260px;
   }
   .moverBadge {
-    margin-left: 285px;
+    margin-left: 275px;
     width: 80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-top: 20px;
     margin-left: -5px;
   }
 }
@@ -1891,9 +1892,10 @@ body {
   .moverBadge {
     margin-left: 310px;
     width: 80px;
+    margin-top: -100px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 20px;
     margin-left: -5px;
   }
 }
@@ -1935,7 +1937,7 @@ body {
     width: 80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 20px;
     margin-left: -5px;
   }
 }
@@ -1973,11 +1975,12 @@ body {
     height: 260px;
   }
   .moverBadge {
-    margin-left: 465px;
+    margin-left: 445px;
     width: 80px;
+    margin-top: -80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
@@ -2019,7 +2022,7 @@ body {
     width: 80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
@@ -2059,9 +2062,10 @@ body {
   .moverBadge {
     margin-left: 645px;
     width: 80px;
+    margin-top: -80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
@@ -2103,7 +2107,7 @@ body {
     width: 80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
@@ -2143,9 +2147,10 @@ body {
   .moverBadge {
     margin-left: 835px;
     width: 80px;
+    margin-top: -80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
@@ -2187,7 +2192,7 @@ body {
     width: 80px;
   }
   .logoResp {
-    margin-bottom: -80px;
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
