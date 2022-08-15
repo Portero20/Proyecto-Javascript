@@ -1805,7 +1805,7 @@ body {
     height: 260px;
   }
   .moverBadge {
-    margin-left: 183px;
+    margin-left: 180px;
     width: 80px;
     margin-top: -75px;
   }
@@ -2235,6 +2235,178 @@ body {
   }
   .logoResp {
     margin-bottom: -5px;
+    margin-left: -5px;
+  }
+}
+/* ---------------- //Media queries para ferreteria (375px a 412px) ---------------- */
+@media (min-width: 376px) and (max-width: 412px) {
+  .moverSelect {
+    margin-bottom: 200px;
+    margin-left: -185px;
+  }
+  .tarjetaFerreteria {
+    margin-left: -65px;
+  }
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    margin-left: 65px;
+    margin-top: 45px;
+  }
+  #grillaFerre {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 130px;
+    gap: 70px;
+    place-items: center;
+    margin-top: -140px;
+  }
+  .txtNodispo {
+    margin-left: -60px;
+  }
+  .noDispo {
+    margin-left: -85px;
+    height: 260px;
+  }
+  .moverBadge {
+    margin-left: 275px;
+    width: 80px;
+    margin-top: -60px;
+  }
+  .logoResp {
+    margin-top: 20px;
+    margin-left: -5px;
+  }
+}
+/* ---------------- //Media queries para ferreteria (480px a 550px) ---------------- */
+@media (min-width: 481px) and (max-width: 550px) {
+  .moverSelect {
+    margin-bottom: 200px;
+    margin-left: -195px;
+  }
+  .tarjetaFerreteria {
+    margin-left: -55px;
+  }
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    margin-left: 95px;
+    margin-top: 45px;
+  }
+  #grillaFerre {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 130px;
+    gap: 70px;
+    place-items: center;
+    margin-top: -140px;
+  }
+  .txtNodispo {
+    margin-left: -35px;
+  }
+  .noDispo {
+    margin-left: -75px;
+    height: 260px;
+  }
+  .moverBadge {
+    margin-left: 375px;
+    width: 80px;
+    margin-top: -100px;
+  }
+  .logoResp {
+    margin-bottom: 20px;
+    margin-left: -5px;
+  }
+}
+/* ---------------- //Media queries para ferreteria (650px a 750px) ---------------- */
+@media (min-width: 651px) and (max-width: 750px) {
+  .moverSelect {
+    margin-bottom: 200px;
+    margin-left: -195px;
+  }
+  .tarjetaFerreteria {
+    margin-left: -55px;
+  }
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    margin-left: 175px;
+    margin-top: 45px;
+  }
+  #grillaFerre {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 130px;
+    gap: 70px;
+    place-items: center;
+    margin-top: -140px;
+  }
+  .txtNodispo {
+    margin-left: -35px;
+  }
+  .noDispo {
+    margin-left: -75px;
+    height: 260px;
+  }
+  .moverBadge {
+    margin-left: 545px;
+    width: 80px;
+    margin-top: -80px;
+  }
+  .logoResp {
+    margin-bottom: 10px;
+    margin-left: -5px;
+  }
+}
+/* ---------------- //Media queries para ferreteria (850px a 950px) ---------------- */
+@media (min-width: 851px) and (max-width: 950px) {
+  .moverSelect {
+    margin-bottom: 200px;
+    margin-left: -195px;
+  }
+  .tarjetaFerreteria {
+    margin-left: -55px;
+  }
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    margin-left: 285px;
+    margin-top: 45px;
+  }
+  #grillaFerre {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 130px;
+    gap: 70px;
+    place-items: center;
+    margin-top: -140px;
+  }
+  .txtNodispo {
+    margin-left: -35px;
+  }
+  .noDispo {
+    margin-left: -75px;
+    height: 260px;
+  }
+  .moverBadge {
+    margin-left: 745px;
+    width: 80px;
+    margin-top: -80px;
+  }
+  .logoResp {
+    margin-bottom: 10px;
     margin-left: -5px;
   }
 }
