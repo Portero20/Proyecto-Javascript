@@ -10,14 +10,12 @@ function selectUI (lista){
 
     for (const titulo of lista) { //por cada tipo que yo encuentre en esa lista
         
-        seleccion.innerHTML += `<option> ${titulo} </option>` //modificar el html interno y el += a lo que ya hay le agrego uno
+        seleccion.innerHTML += `<option> ${titulo}</option>` //modificar el html interno y el += a lo que ya hay le agrego uno
     }
     
 }
 
 selectUI(tipos)
-ensecoUI(seco)
-
 
 
 //Recorremos el select

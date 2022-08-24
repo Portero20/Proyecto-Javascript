@@ -112,7 +112,7 @@ buscarProducto.addEventListener("input", function () {  //llamamos al evento inp
 
 
 
-//Seleccionamos el producto en seco
+//Seleccionamos el producto en seco (boton)
 
 function seleccionamosProducto() {
 

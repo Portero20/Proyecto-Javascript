@@ -86,32 +86,32 @@ function tarjetasUI(lista) {
 tarjetasUI(tarjetas)
 
 
-//Seleccionamos el producto
+//Seleccionamos el producto (boton)
 
-function seleccionarProducto() {
+function seleccionarProducto() { //creamos una función porque la utilizaremos en varias partes del código
 
-  let iconos = document.getElementsByClassName("btnCompra");
+  let iconos = document.getElementsByClassName("btnCompra"); //seleccionamos al elemento por la clase
 
-  for (const icono of iconos) {
+  for (const icono of iconos) {  //por cada icono que recorra le agrego una funcionalidad
 
-    icono.addEventListener("click", function () {
+    icono.addEventListener("click", function () { //al icono le agregamos la propiedad addEventListener
 
 
-      let seleccion = carrito.find(producto => producto.id == this.id);
+      let seleccion = carrito.find(producto => producto.id == this.id); //hacemos un find para validar que no se repita en el carrito
 
 
       if (seleccion) {
 
-        seleccion.addCantidad();
+        seleccion.addCantidad(); //en vez de agregarlo de nuevo le agrego la cantidad
 
       } else {
 
-        seleccion = tarjetas.find(producto => producto.id == this.id)
+        seleccion = tarjetas.find(producto => producto.id == this.id) //si no lo puso en el carrito, lo buscara al producto y cuando lo obtiene lo guarda en el carrito
         carrito.push(seleccion)
 
       }
 
-      localStorage.setItem("Carrito", JSON.stringify(carrito))
+      localStorage.setItem("Carrito", JSON.stringify(carrito)) //llamamos al localStorage
 
       carritoHTML(carrito)
 
